@@ -677,6 +677,7 @@ export const site = {
         { name: "Christian Hopfner", role: "Strategieberatung", image: "/images/team/christian-hopfner.jpg" },
         { name: "Calvin Okoh", role: "Strategieberatung", image: "/images/team/calvin-okoh.jpg" },
         { name: "Kaan Ocaktan", role: "Strategieberatung", image: "/images/team/kaan-ocaktan.jpg" },
+        { name: "Timotheus Musiol", role: "Strategieberatung", image: "/images/team/timotheus-musiol.jpg" }, // TODO echtes Foto (426×640) unter gleichem Namen ablegen
         { name: "Dominik Moggert", role: "Accountmanagement", image: "/images/team/dominik-moggert.jpg" },
         { name: "Liliia Mkhytarian", role: "Projektmanagement, Webentwicklung", image: "/images/team/liliia-mkhytarian.jpg" },
         { name: "Bator Pisch", role: "Projektmanagement", image: "/images/team/bator-pisch.jpg" },
