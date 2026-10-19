@@ -180,7 +180,7 @@ Close Custom Fields: Lead-Quelle custom.cf_A3uckuhX5CK9TaxeTrWAvHBzALiBM91OG12k8
                      Lead-Kanal custom.cf_xQgVdBgrXBDwJMkCrvp0Li35U0hVeFnc7XMCyxHjwkO (Auswahl, Wert „Website“)
 Resend-Absenderdomain: versand.atex-media.de (verifiziert)
 Figma AtexJobs (Hero-Kacheln, Mockups): Key Yu46JDPRhYAeTIREiUrGN9 – Uploads per curl -F nur als einzelne Befehle
-Team (Über uns): Daniel Meier (GF), Christian Hopfner, Thomas Huber, Calvin Okoh, Kaan Ocaktan (Strategieberatung),
+Team (Über uns): Daniel Meier (GF), Christian Hopfner, Calvin Okoh, Kaan Ocaktan (Strategieberatung),
   Dominik Moggert (Accountmanagement), Liliia Mkhytarian (Projektmanagement, Webentwicklung), Bator Pisch (Projektmanagement),
   Roman Opitz (Foto/Video), Mona Schmidt (Backoffice) – Fotos in public/images/team der Vorlage
 ```
