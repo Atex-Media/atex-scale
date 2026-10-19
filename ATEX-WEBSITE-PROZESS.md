@@ -40,7 +40,7 @@ Formular, Cookie-Hinweis, Rechtsseiten, SEO-Gerüst bleiben.
 | Framework | Next.js 16 (App Router, TypeScript) – **Hinweis:** andere API als in älteren Versionen, vor dem Schreiben `node_modules/next/dist/docs/` lesen (steht auch in AGENTS.md des Projekts) |
 | Styling | Tailwind CSS 4 mit `@theme`-Tokens |
 | Code | GitHub, Konto `vndno`, privates Repo je Projekt |
-| Hosting | Vercel, Import aus GitHub, jeder Push auf `main` geht automatisch live (30–60 s) |
+| Hosting | Vercel-Team „Atex Media GmbH“ (Slug atexmedia), Import aus GitHub, jeder Push auf `main` geht automatisch live (30–60 s) |
 | CRM | Close (REST-API aus der Vercel-Funktion) |
 | Mail | Resend, Absenderdomain `versand.atex-media.de` (bereits verifiziert, kann für alle Atex-Marken genutzt werden) |
 | Termine | Calendly `https://calendly.com/hopfner-atex-media/erstgespraech-christianhopfner` |
