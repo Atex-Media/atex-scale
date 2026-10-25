@@ -216,6 +216,27 @@ export const site = {
     },
   },
 
+  // Stufe 1 · Angebot (Whitepaper S. 5): drei Schritte, Karte „Schnelle Formulare“, Bühne mit Beispiel-Angebotsseite
+  offer: {
+    eyebrow: "Stufe 1 · Angebot",
+    headlineBold: "Erst wissen, wer kauft.",
+    headlineLight: "Dann ein Angebot, das auffällt.",
+    text: "In der Angebotsphase klären wir, wer Ihre Kunden sind, wo sie sitzen und wie wir sie erreichen – und formen daraus ein Angebot, mit dem Sie aus der Masse herausstechen oder als Premium-Anbieter wahrgenommen werden. Erst dann bauen wir die Angebotsseite.",
+    steps: [
+      { title: "Zielgruppenanalyse", text: "Wer kauft, wo und warum: Privat oder Gewerbe, Region und Radius, wer entscheidet, typischer Auftragswert." },
+      { title: "Positionierung", text: "Masse oder Premium: Was Sie besonders macht, Ihr Preisrahmen, Ihr Versprechen in einem Satz – im Vergleich zu den Anbietern vor Ort." },
+      { title: "Vorzüge herausarbeiten", text: "Festpreis, Termin in zehn Tagen, Meisterbetrieb, Garantie, Referenzen, Bewertungen – belegt, nicht behauptet." },
+    ],
+    form: { eyebrow: "Schnelle Formulare", title: "Drei Felder, ein Klick – jede Hürde weniger ist eine Anfrage mehr.", fields: ["Name", "Telefon", "Anliegen"], button: "Senden" },
+    stage: {
+      eyebrow: "Ihre Angebotsseite",
+      url: "rf-allgaeu.de/preisanfrage",
+      desktop: { src: "/images/wp/angebot/desktop.jpg", alt: "Angebotsseite Preisanfrage von RF Allgäu am Desktop" },
+      mobile: { src: "/images/wp/angebot/mobil.png", alt: "Preisanfrage-Strecke von RF Allgäu auf dem Smartphone" },
+      caption: "Beispiel: Preisanfrage-Strecke RF Allgäu – Angebotsseite als Erweiterung der Webseite",
+    },
+  },
+
   // Der Ablauf: vier Reiter links, Detail rechts (Text + vier Kärtchen), darunter der Kreislauf als Leiste
   process: {
     eyebrow: "Der Ablauf",
