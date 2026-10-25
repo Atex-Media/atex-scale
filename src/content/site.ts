@@ -150,46 +150,30 @@ export const site = {
     ],
   },
 
-  // 01 · Drei Probleme, jede Karte mit kleiner Grafik oben; darunter dunkles Fazit-Band mit Button
+  // Der Engpass (Whitepaper S. 2): vier Karten mit Mini-Grafik oben, darunter ein Band mit Button
   problem: {
-    eyebrow: "01 · Der Engpass",
-    headlineBold: "Drei Gründe, warum",
-    headlineLight: "der Auftragseingang schwankt",
-    referrals: {
-      title: "Neue Kunden kommen nur über Empfehlungen",
-      text: "Im Tagesgeschäft bleibt keine Zeit für Akquise. Aufträge kommen, wenn jemand Sie weiterempfiehlt. Planen lässt sich damit nichts, weder Personal noch Material.",
-      // Säulen: Anfragen pro Monat (Grafik zur Veranschaulichung, keine Messwerte)
-      chartLabel: "Anfragen pro Monat",
-      months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun"],
-      values: [6, 3, 7, 1, 5, 2],
-      lowIndex: 3,
-      lowNote: "April: 1 Anfrage",
-    },
-    fit: {
-      title: "Die Anfragen, die kommen, passen nicht",
-      text: "Viele wollen nur einen Preis zum Vergleich, wohnen außerhalb Ihres Gebiets oder haben noch gar kein Budget. Jedes dieser Gespräche kostet Sie trotzdem eine halbe Stunde.",
-      messages: [
-        { text: "Was kostet das ungefähr? Nur zum Vergleichen.", tag: "Kein Bedarf", image: "/images/profil/07.jpg" },
-        { text: "Wir wohnen bei Hamburg, kommen Sie auch hierher?", tag: "Falsche Region", image: "/images/profil/26.jpg" },
-      ],
-    },
-    tools: {
-      title: "Viele Dienstleister, keiner zuständig",
-      text: "Google-Agentur, Leadportal, Webseiten-Baukasten, dazu ein Freelancer für Social Media. An jeder Übergabe geht etwas verloren, und für das Ergebnis fühlt sich niemand verantwortlich.",
-      // Kette aus Diensten; broken = Übergabe klappt nicht
-      links: [
-        { from: "Google-Agentur", to: "Webseite", broken: true },
-        { from: "Leadportal", to: "Ihr Postfach", broken: false },
-        { from: "Social Media", to: "Rückruf", broken: true },
-      ],
-      alert: "Anfrage seit 4 Tagen unbeantwortet",
-    },
-    banner: {
-      before: "Meist fehlt keine weitere Maßnahme. Es fehlt",
-      highlight: "ein Ablauf",
-      after: ", der aus Werbung, Webseite und Nachfassen verlässlich Termine macht.",
-      cta: "Engpass besprechen",
-    },
+    eyebrow: "Der Engpass",
+    headline: "Vier Gründe, warum gute Betriebe zu wenig Aufträge haben",
+    text: "Die meisten Betriebe haben kein Leistungsproblem. Sie haben keinen Vertrieb: Niemand kümmert sich darum, dass neue Aufträge reinkommen. Und das sieht fast immer gleich aus.",
+    cards: [
+      { title: "Der Auftragseingang schwankt", text: "Aufträge kommen über Bestandskunden und Empfehlungen. Läuft das Tagesgeschäft, passiert keine Akquise.", chartLabel: "Anfragen pro Monat" },
+      { title: "Unsichtbar für Suchende", text: "Generalunternehmer, Bauträger und Privatkunden suchen online. Wer dort nicht auftaucht, existiert für sie nicht.", search: "Elektriker Regensburg", notFound: "Ihr Betrieb: nicht gefunden" },
+      {
+        title: "Die falschen Anfragen kommen",
+        text: "Irgendetwas auf die breite Masse schalten bringt Klicks, aber keine Kunden. Budget versickert.",
+        messages: [
+          { text: "„Was kostet das ungefähr? Nur zum Vergleichen.“", tag: "Kein Bedarf" },
+          { text: "„Wir wohnen bei Hamburg, kommen Sie auch?“", tag: "Falsche Region" },
+        ],
+      },
+      {
+        title: "Kein eigener Vertrieb",
+        text: "Kein Verkäufer, kein Marketing, keine Zeit. Akquise macht der Chef – zwischen zwei Baustellen, wenn überhaupt.",
+        roles: { left: ["Chef", "Monteur"], right: ["Büro", "Angebot", "Vertrieb"], arrow: "zuständig für..", nobody: "Zuständig: niemand" },
+      },
+    ],
+    band: "Meist fehlt keine weitere Werbemaßnahme. Es fehlt jemand, der den Vertrieb macht: sichtbar sein, Anfragen holen, nachfassen. Genau das übernehmen wir für Sie.",
+    cta: "Engpass besprechen",
   },
 
   // 02 · Das System: links fünf Schritte, rechts Live-Dashboard (Eingaben → Anfragen-Eingang → Stufen → Kennzahlen)
