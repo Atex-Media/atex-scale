@@ -14,7 +14,7 @@ BAFA-Siegel: `bafa-berater.png` (Berater-ID 228969; das Siegel im Figma trägt d
 Noch offen:
 - og-image.jpg                 (Vorschaubild für Google/LinkedIn/WhatsApp, 1200×630 – aktuell nur ein Bürofoto als Übergang)
 
-Weiter verwendet: kunden/01–04.jpg (Hero) · logos/*.svg (Logo-Band) · team/*.jpg · ueber-uns/*.jpg (auch Über-uns-Seite)
+Weiter verwendet: kunden/01–04.jpg (Hero) · logos/* (Logo-Band: Brandl, Innengrün, Infinno, Energie Optimal, Schuld, RF Allgäu) · team/*.jpg · ueber-uns/*.jpg (auch Über-uns-Seite)
 
 Nicht mehr auf der Startseite verwendet (können bleiben oder gelöscht werden):
 - hero/*, profil/*, system-agent/*, journey/*, networks/*, mockups/*, bafa.jpg, kunden/05–06.jpg

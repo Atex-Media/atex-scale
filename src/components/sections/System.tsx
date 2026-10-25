@@ -9,6 +9,9 @@ import { Stage, figmaScale } from "@/components/figma";
  */
 const IMG = "/images/wp/system";
 const GLOW = "rgba(242,107,75,0.38) 0%, rgba(201,71,43,0.149) 45%, rgba(201,71,43,0) 68%";
+// Meta-Zeichen (Unendlich-Schleife) als Vektor, 24 × 24
+const META_PATH =
+  "M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z";
 
 // Grafik je Stufe: Größe der SVG-Fläche, Mittelpunkt des Motivs darin, Lage des Mittelpunkts im Feld (in %) und Maßstab
 const graphics = [
@@ -155,13 +158,15 @@ function Lasting() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${IMG}/seo-leiste.png`} alt="" aria-hidden loading="lazy" style={{ position: "absolute", left: "-4.99%", top: "-16.67%", width: "116.24%", height: "134.21%" }} className="max-w-none" />
         </div>
-        <span style={{ ...pos(56, y(248), 30.56, 30.56), boxShadow: "0 0 7px rgba(0,0,0,0.25)" }} className="overflow-hidden rounded-full bg-[#0080fb]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${IMG}/meta.png`} alt="Meta" style={{ position: "absolute", left: "14.56%", top: "25.13%", width: "70.57%", height: "46.85%" }} className="max-w-none object-contain object-bottom" />
+        {/* Kanal-Symbole: Zeichen mittig im Kreis, Seitenverhältnis bleibt erhalten */}
+        <span role="img" aria-label="Meta" style={{ ...pos(56, y(248), 30.56, 30.56), boxShadow: "0 0 7px rgba(0,0,0,0.25)" }} className="flex items-center justify-center rounded-full bg-[#0080fb]">
+          <svg viewBox="0 0 24 24" aria-hidden className="w-[64%] fill-white">
+            <path d={META_PATH} />
+          </svg>
         </span>
-        <span style={{ ...pos(207, y(219), 40, 40), boxShadow: "0 0 16.6px rgba(0,0,0,0.25)" }} className="overflow-hidden rounded-full bg-white">
+        <span role="img" aria-label="Google Ads" style={{ ...pos(207, y(219), 40, 40), boxShadow: "0 0 16.6px rgba(0,0,0,0.25)" }} className="flex items-center justify-center rounded-full bg-white">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${IMG}/google-ads.svg`} alt="Google Ads" style={{ position: "absolute", left: "23.63%", top: "26.37%", right: "23.69%", bottom: "26.37%" }} />
+          <img src={`${IMG}/google-ads.svg`} alt="" aria-hidden width={21} height={19} className="h-auto w-[52%]" />
         </span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={`${IMG}/handy.png`} alt="" aria-hidden loading="lazy" style={pos(20, y(294), 170.88, 143.59)} className="max-w-none object-cover" />

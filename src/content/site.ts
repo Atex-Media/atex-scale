@@ -110,8 +110,6 @@ export const site = {
       { label: "Karriere", href: "https://www.atex-media.de/karriere" }, // Stellen bei Atex Media (öffnet in neuem Tab)
       { label: "Kontakt", href: "/kontakt" },
     ],
-    // Zweiter Button (Rahmen): Schwestermarke AtexJobs für Mitarbeitergewinnung
-    secondary: { label: "Mitarbeiter gewinnen", href: "https://www.atex-jobs.de" },
     cta: "Gespräch vereinbaren",
   },
 
@@ -137,16 +135,16 @@ export const site = {
 
   logos: {
     // Dunkles Band unter dem Hero: Überschrift oben, Logos laufen durch, Hinweis darunter
-    text: "Betriebe und Kanzleien, die mit der Atex Media Gruppe arbeiten",
+    text: "Betriebe, die mit der Atex Media Gruppe arbeiten",
     more: "und 160+ weitere Partnerbetriebe im Neukundenbereich",
     // Logos als SVG/PNG in /public/images/logos ablegen (werden auf dem dunklen Band weiß dargestellt)
     items: [
-      { name: "Energie Optimal", src: "/images/logos/energie-optimal.svg" },
-      { name: "Infinno", src: "/images/logos/infinno.svg" },
-      { name: "Bastian Kaspar", src: "/images/logos/bastian-kaspar.svg" },
-      { name: "Dentalkeramik", src: "/images/logos/dentalkeramik.svg" },
+      { name: "Elektrotechnik Brandl", src: "/images/logos/brandl.svg" },
       { name: "Innengrün", src: "/images/logos/innengruen.svg" },
-      { name: "Murr & Siedentop", src: "/images/logos/murr-siedentop.svg" },
+      { name: "Infinno", src: "/images/logos/infinno.svg" },
+      { name: "Energie Optimal", src: "/images/logos/energie-optimal.svg" },
+      { name: "Elektrotechnik Schuld", src: "/images/logos/schuld.svg" },
+      { name: "RF Allgäu", src: "/images/logos/rf-allgaeu.png" },
     ],
   },
 
