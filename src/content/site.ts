@@ -105,8 +105,8 @@ export const site = {
   nav: {
     links: [
       { label: "Leistungen", href: "/#leistungen" },
+      { label: "Ablauf", href: "/#ablauf" },
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Referenzen", href: "/#referenzen" },
       { label: "Karriere", href: "https://www.atex-media.de/karriere" }, // Stellen bei Atex Media (öffnet in neuem Tab)
       { label: "Kontakt", href: "/kontakt" },
     ],
@@ -117,42 +117,28 @@ export const site = {
 
   hero: {
     eyebrow: "Neukundengewinnung für den Mittelstand",
-    headlineBold: "Neue Kunden gewinnen",
-    headlineLight: "mit schriftlicher Zusage",
-    text: "Kampagnen, Landingpage und die Prüfung jeder Anfrage kommen bei uns aus einer Hand. Bei Ihnen landen Termine mit Menschen, die wirklich kaufen wollen. Wie viele es werden, rechnen wir vorher für Ihre Region aus.",
+    headlineBold: "Neue Kunden gewinnen.",
+    headlineLight: "Ohne Kaltakquise, ohne Portale.",
+    text: "Wie kleine und mittlere Betriebe planbar Anfragen bekommen – und daraus Aufträge machen. Wir übernehmen den Vertrieb: sichtbar sein, Anfragen holen, nachfassen.",
     cta: "Gespräch vereinbaren",
-    ctaSecondary: { label: "Referenzen ansehen", href: "#referenzen" },
+    ctaSecondary: { label: "So funktioniert es", href: "#leistungen" },
     // Porträtreihe unter den Buttons (Dateien in /public/images/kunden)
     proof: {
       avatars: ["/images/kunden/01.jpg", "/images/kunden/02.jpg", "/images/kunden/03.jpg", "/images/kunden/04.jpg"],
-      value: "280+ Betriebe und Kanzleien", // TODO prüfen
-      label: "arbeiten mit der Atex Media Gruppe",
-    },
-    // Netzwerk-Grafik: links die Quellen, in der Mitte der Anfragen-Eingang, rechts das Ergebnis.
-    // x/y = Mittelpunkt der Karte auf einer Zeichenfläche von 1200 × 460. kind: source (orange) · result (grün) · score (Zusage)
-    graph: {
-      center: { title: "Atex Scale", sub: "Anfragen-Eingang", status: "läuft" },
-      nodes: [
-        { title: "Meta-Kampagne", sub: "Facebook & Instagram", kind: "source" as const, x: 190, y: 96, image: "" },
-        { title: "Google-Suche", sub: "Suche & Maps", kind: "source" as const, x: 130, y: 290, image: "" },
-        { title: "Landingpage", sub: "Anfrage in 2 Minuten", kind: "source" as const, x: 360, y: 398, image: "" },
-        { title: "Neue Anfrage", sub: "Badsanierung · Regensburg", kind: "source" as const, x: 440, y: 44, image: "/images/profil/13.jpg" },
-        { title: "Zusage möglich", sub: "Markt-Score 8.4", kind: "score" as const, x: 800, y: 58, image: "" },
-        { title: "Termin gebucht", sub: "Dienstag, 14:00 Uhr", kind: "result" as const, x: 1050, y: 178, image: "/images/profil/04.jpg" },
-        { title: "Geprüft", sub: "Bedarf, Region, Budget", kind: "result" as const, x: 860, y: 392, image: "" },
-      ],
+      rating: "★ 4,8 / 5 auf Google", // laut Whitepaper; Link zum Google-Profil fehlt noch
+      label: "160+ Partnerbetriebe im Neukundenbereich",
     },
     features: [
-      { icon: "filter" as const, title: "Geprüfte Anfragen.", text: "Jede Anfrage prüfen wir binnen 24 Stunden auf Bedarf, Region und Budget." }, // TODO prüfen (24 h)
-      { icon: "calendar" as const, title: "Termine im Kalender.", text: "Wer passt, bekommt direkt einen Termin bei Ihnen. Kein Hinterhertelefonieren." },
-      { icon: "shield" as const, title: "Zusage auf Papier.", text: "Vor dem Start sagen wir Ihnen eine Anzahl Anfragen schriftlich zu." },
+      { icon: "filter" as const, title: "Qualifizierte Anfragen.", text: "Name, Kontakt, konkreter Bedarf und Standort in Ihrem Einzugsgebiet." },
+      { icon: "clock" as const, title: "Antwort in der ersten Minute.", text: "Jede Anfrage wird sofort bestätigt und bis zur Entscheidung nachgefasst." },
+      { icon: "shield" as const, title: "Was wir aufbauen, bleibt bei Ihnen.", text: "Angebotsseite, Unternehmensprofil und Bewertungen gehören Ihrem Betrieb." },
     ],
   },
 
   logos: {
     // Dunkles Band unter dem Hero: Überschrift oben, Logos laufen durch, Hinweis darunter
     text: "Betriebe und Kanzleien, die mit der Atex Media Gruppe arbeiten",
-    more: "und mehr als 280 weitere im gesamten DACH-Raum", // TODO prüfen
+    more: "und 160+ weitere Partnerbetriebe im Neukundenbereich",
     // Logos als SVG/PNG in /public/images/logos ablegen (werden auf dem dunklen Band weiß dargestellt)
     items: [
       { name: "Energie Optimal", src: "/images/logos/energie-optimal.svg" },
@@ -252,9 +238,9 @@ export const site = {
     },
   },
 
-  // 03 · Der Ablauf: vier Reiter links, Detail rechts (Text + vier Kärtchen), darunter der Kreislauf als Leiste
+  // Der Ablauf: vier Reiter links, Detail rechts (Text + vier Kärtchen), darunter der Kreislauf als Leiste
   process: {
-    eyebrow: "03 · Der Ablauf",
+    eyebrow: "Der Ablauf",
     headlineBold: "Von der ersten Anzeige",
     headlineLight: "bis zum Termin in Ihrem Kalender",
     text: "Vier Schritte greifen ineinander und laufen dauerhaft weiter, solange Ihre Kampagne läuft. Bei Ihnen kommt am Ende an, was zählt: Termine mit Menschen, die kaufen wollen.",
@@ -313,113 +299,9 @@ export const site = {
     ],
   },
 
-  // 04 · Warum es funktioniert: links Text + vier Merkmale, rechts Schema „Was Sie bekommen“
-  why: {
-    eyebrow: "04 · Warum es funktioniert",
-    headlineBold: "Erfahrung aus vielen Branchen.",
-    headlineLight: "Ein Team, das bleibt.",
-    text: "Seit 2018 arbeitet die Atex Media Gruppe für Betriebe, Praxen und Kanzleien im Mittelstand. Aus diesen Projekten wissen wir, wie in welcher Branche gesucht wird, welche Botschaft zieht und was eine Anfrage kostet. Darauf baut jeder Markt-Check auf. Betreut wird Ihr Projekt von einem festen Team in Regensburg, nicht von einer Hotline.",
-    features: [
-      { icon: "building" as const, tone: "accent" as const, title: "280+ Betriebe", text: "Handwerk, Praxen, Kanzleien und B2B" }, // TODO prüfen
-      { icon: "chartLine" as const, tone: "navy" as const, title: "Erfahrungswerte", text: "Suchvolumen und Kosten je Branche" },
-      { icon: "users" as const, tone: "success" as const, title: "Festes Team", text: "Beratung, Kampagnen, Foto und Web" },
-      { icon: "eye" as const, tone: "soft" as const, title: "Nachvollziehbar", text: "Jede Anfrage einem Kanal zugeordnet" },
-    ],
-    diagram: {
-      title: "Was Sie bekommen",
-      inputsLabel: "Ihr Markt, vorab geprüft",
-      inputs: ["Werte aus unseren Projekten", "Suchdaten Ihrer Region", "Ihr Angebot und Auftragswert"],
-      engine: { title: "Atex Scale Markt-Check", sub: "Analyse und Kampagnen aus einer Hand", status: "aktiv" },
-      tiles: [
-        { value: "Markt-Score", label: "für Ihre Region" },
-        { value: "Prognose", label: "Anfragen je Monat" },
-        { value: "Zusage", label: "schriftlich" },
-      ],
-      outputsLabel: "Was bei Ihnen ankommt",
-      outputs: ["Geprüfte Anfragen", "Gebuchte Termine", "Neue Aufträge"],
-      footer: "Geplant und betreut von unserem Team in Regensburg",
-    },
-  },
-
-  // 05 · Die Methode: Prinzip (Wiederholung schafft Vertrauen) → schematische Kurve → drei Phasen → drei Wirkprinzipien → Fazit
-  method: {
-    eyebrow: "05 · Die Methode",
-    headlineBold: "Erst sehen, dann vertrauen,",
-    headlineLight: "dann anfragen",
-    text: "Kaum jemand fragt beim ersten Kontakt an. Deshalb begegnet Ihr Wunschkunde Ihrem Angebot mehrmals und auf verschiedenen Kanälen, bis er so weit ist.",
-    principle: {
-      eyebrow: "Warum das wirkt",
-      title: "Vertrautheit entsteht durch Wiederholung",
-      text: "Was wir öfter sehen, halten wir für vertrauter und glaubwürdiger, auch ohne bewusst darüber nachzudenken. Die Psychologie nennt das Mere-Exposure-Effekt. Für Ihr Angebot heißt das: Wer Ihren Betrieb schon ein paarmal gesehen hat, ruft eher bei Ihnen an als bei einem Mitbewerber, den er nicht kennt.",
-      stages: [
-        { count: "1. Kontakt", title: "Gesehen", text: "Das Angebot fällt im Feed oder in der Suche auf" },
-        { count: "2 bis 3 Kontakte", title: "Erinnert", text: "Der Name Ihres Betriebs kommt bekannt vor" },
-        { count: "4 bis 6 Kontakte", title: "Geprüft", text: "Fotos, Bewertungen und Webseite werden angesehen" },
-        { count: "ab 7 Kontakten", title: "Angefragt", text: "Der Kontakt meldet sich bei Ihnen" },
-      ],
-    },
-    // Schematische Kurve, keine Messwerte (x = Kontakte 0–9, y = 0–100)
-    chart: {
-      title: "Anfragebereitschaft nach Kontakten",
-      sub: "Je öfter jemand Ihren Betrieb wahrnimmt, desto eher meldet er sich.",
-      badge: "Schematische Darstellung",
-      yLabel: "Bereitschaft anzufragen",
-      xLabel: "Kontakte mit Ihrem Angebot",
-      points: [
-        { x: 1, y: 14, label: "Gesehen" },
-        { x: 3, y: 40, label: "Erinnert" },
-        { x: 5, y: 64, label: "Geprüft" },
-        { x: 8, y: 86, label: "Angefragt" },
-      ],
-    },
-    phasesTitle: "Drei Phasen, drei Ziele",
-    phases: [
-      {
-        label: "Phase 1",
-        tag: "Aufmerksam machen",
-        title: "Erster Kontakt über ein konkretes Angebot",
-        text: "Eine klare Botschaft zu einem Problem, das Ihr Kunde gerade hat. Zum Beispiel: Wärmepumpe statt Ölheizung, mit Förderung.",
-        channels: ["Instagram-Feed", "Google-Suche", "YouTube"],
-        time: "Woche 1 bis 3", // TODO prüfen
-        goal: "wahrgenommen werden",
-      },
-      {
-        label: "Phase 2",
-        tag: "Vertrauen aufbauen",
-        title: "Wiederansprache mit Einblicken und Beweisen",
-        text: "Wer Ihre Anzeige gesehen hat, sieht jetzt fertige Projekte, Ihr Team und Bewertungen aus der Region.",
-        channels: ["Instagram-Story", "Facebook", "Google-Display"],
-        time: "Woche 4 bis 8", // TODO prüfen
-        goal: "Vertrauen gewinnen",
-      },
-      {
-        label: "Phase 3",
-        tag: "Zur Anfrage führen",
-        title: "Direkte Einladung mit einfachem nächsten Schritt",
-        text: "Ein konkreter Anlass und ein kurzer Weg: Termin wählen, Formular in zwei Minuten oder eine Nachricht per WhatsApp.",
-        channels: ["Retargeting", "WhatsApp", "Landingpage"],
-        time: "ab Woche 9", // TODO prüfen
-        goal: "Anfrage auslösen",
-      },
-    ],
-    timeLabel: "Zeitraum",
-    goalLabel: "Ziel",
-    channelsLabel: "Kanäle",
-    triggersEyebrow: "Was dahinter steckt",
-    triggers: [
-      { title: "Relevanz", text: "Eine Botschaft zu einem akuten Problem wird gelesen. Allgemeine Imagewerbung wird überscrollt." },
-      { title: "Beweis durch andere", text: "Fertige Projekte und Bewertungen aus der Nachbarschaft nehmen die Sorge, an den Falschen zu geraten." },
-      { title: "Ein einfacher nächster Schritt", text: "Je kürzer der Weg zur Anfrage, desto mehr Menschen gehen ihn. Zwei Minuten statt zehn Pflichtfelder." },
-    ],
-    banner: {
-      highlight: "Jede Phase hat eigene Anzeigen und ein eigenes Ziel.",
-      text: "Wir werten laufend aus, welche Kombination die meisten Termine bringt, und verschieben das Budget dorthin.",
-    },
-  },
-
-  // 06 · Privat- und Geschäftskunden: links Text + zwei Karten (B2C/B2B), rechts Foto-Karte Erstgespräch
+  // Privat- und Geschäftskunden: links Text + zwei Karten (B2C/B2B), rechts Foto-Karte Erstgespräch
   audiences: {
-    eyebrow: "06 · Privat- und Geschäftskunden",
+    eyebrow: "Privat- und Geschäftskunden",
     headlineBold: "Für Privatkunden,",
     headlineLight: "genauso wie für Geschäftskunden",
     text: "Ob jemand ein neues Bad plant oder ein Unternehmen einen Steuerberater sucht: Ohne Vertrauen fällt keine Entscheidung. Der Weg dahin ist unterschiedlich lang, der Ablauf dahinter bleibt derselbe.",
@@ -448,192 +330,6 @@ export const site = {
       text: "In 15 Minuten klären wir, wie Ihre Kunden suchen und welcher Weg für Ihr Angebot passt. Kostenlos und ohne Verkaufsgespräch.",
       cta: { label: "Termin wählen", href: "/kontakt" },
     },
-  },
-
-  // 07 · Aus der Praxis: Case Study H24 (Inhalte nach atex-media.de/referenzen/h24)
-  caseStudy: {
-    eyebrow: "07 · Aus der Praxis",
-    client: "H24 GmbH",
-    headlineBold: "H24: Bundesweit Anfragen",
-    headlineLight: "für eine B2B-Software",
-    intro: "H24 entwickelt DSGVO-konforme KI-Chatbots für Unternehmen und Behörden. Webseite, Kampagnen und Vertrieb liefen nebeneinander her. Anfragen kamen unregelmäßig und mussten von Hand weitergegeben werden.",
-    text: "Wir haben den Auftritt neu aufgestellt, je Produkt eine eigene Landingpage für die Kampagnen gebaut und Zahlungsabwicklung, CRM und Tracking angebunden. Jede Anfrage landet seitdem automatisch dort, wo sie bearbeitet wird.",
-    factsTitle: "Eckdaten des Projekts",
-    facts: [
-      { value: "Bundesweit", label: "Zielmarkt im B2B" },
-      { value: "2 Produkte", label: "mit eigener Landingpage" },
-      { value: "Mehrjährig", label: "in Zusammenarbeit" }, // TODO prüfen (Startjahr)
-    ],
-    points: [
-      { icon: "target" as const, title: "Geschärfte Positionierung", text: "Ein Auftritt, der beide Produkte klar voneinander abgrenzt" },
-      { icon: "megaphone" as const, title: "Landingpage je Produkt", text: "Eigene Seiten als Ziel für die Google-Ads-Kampagnen" },
-      { icon: "link" as const, title: "CRM und Tracking angebunden", text: "Anfragen laufen ohne Umweg direkt in den Vertrieb" },
-    ],
-    servicesTitle: "Leistungen im Projekt",
-    services: ["Landingpages", "Google Ads", "Webseite", "CRM-Anbindung"],
-    image: { src: "/images/referenzen/h24.jpg", alt: "Landingpage von H24 am Desktop und Smartphone" }, // TODO Bild ablegen (Querformat 16:10, ~1200×750); bis dahin Platzhalter
-    caption: "Landingpages, Kampagnen und CRM in einem Ablauf",
-    industriesTitle: "Branchen, für die wir arbeiten",
-    industries: [
-      { name: "Handwerk und Sanierung", tag: "B2C" },
-      { name: "Heizung und Energie", tag: "B2C + B2B" },
-      { name: "Zahnarzt- und Arztpraxen", tag: "B2C" },
-      { name: "Pflege und Gesundheit", tag: "B2C" },
-      { name: "Steuer und Recht", tag: "B2B + B2C" },
-      { name: "Ingenieurbüros", tag: "B2B" },
-      { name: "Software und IT", tag: "B2B" },
-      { name: "Industrie und Zulieferer", tag: "B2B" },
-    ],
-    link: { label: "Ganze Referenz lesen", href: "https://www.atex-media.de/referenzen/h24" },
-  },
-
-  // 08 · Kampagnen aus der Praxis: links Text, rechts zwei Handys mit Beispielmotiven (Video- und Social-Anzeige)
-  showcase: {
-    eyebrow: "08 · Kampagnen aus der Praxis",
-    badge: { title: "Beispielmotive", sub: "So sind unsere Anzeigen aufgebaut" },
-    headlineBold: "Aus Ihrem Angebot wird",
-    headlineLight: "eine Anzeige, die man versteht",
-    text: "Echte Fotos aus Ihrem Betrieb, eine klare Botschaft und ein Weg zur Anfrage, der auf dem Handy funktioniert. Die Motive rechts zeigen den Aufbau. Kampagnen unserer Kunden zeigen wir Ihnen gern im persönlichen Gespräch.",
-    chips: [
-      { icon: "camera" as const, label: "Echte Fotos" },
-      { icon: "message" as const, label: "Klare Botschaft" },
-      { icon: "send" as const, label: "Anfrage per Klick" },
-    ],
-    cta: "Beispiele im Gespräch ansehen",
-    note: "Beispielmotive zur Veranschaulichung. Kennzahlen und Kampagnen einzelner Kunden zeigen wir nur mit deren Zustimmung.",
-    video: {
-      tag: "Video-Anzeige",
-      extra: "Dreh vor Ort",
-      image: "/images/hero/22-shk.jpg",
-      title: "Ihr neues Bad",
-      sub: "Geplant und gebaut aus einer Hand",
-      duration: "0:20",
-      caption: { title: "Badsanierung im Kurzvideo", sub: "Instagram und Facebook" },
-    },
-    social: {
-      tag: "Social-Anzeige",
-      account: "Ihr Betrieb",
-      sponsored: "Gesponsert",
-      image: "/images/hero/23-elektriker.jpg",
-      headline: "PV-Anlage mit Speicher",
-      body: "Kostenlose Beratung vor Ort, im Umkreis von 40 km.",
-      button: "Jetzt anfragen",
-      caption: { title: "Photovoltaik regional beworben", sub: "Beitrag im Instagram-Feed" },
-    },
-    caption: "Zwei Beispielmotive. Den strategischen Aufbau erklären wir im Gespräch.",
-  },
-
-  // 09 · Schriftliche Zusage: links drei Schritte, rechts Beispiel-Markt-Check mit Balken, Zusage-Liste und Button
-  guarantee: {
-    eyebrow: "09 · Schriftliche Zusage",
-    headlineBold: "Wir rechnen Ihren Markt vorher durch.",
-    headlineLight: "Dann sagen wir schriftlich zu.",
-    text: "Bevor wir starten, prüfen wir Ihre Region: Wie oft wird Ihr Angebot gesucht, wie viele Mitbewerber werben, was kostet eine Anfrage? Aus diesen Werten und den Ergebnissen vergleichbarer Projekte entsteht eine Prognose. Was wir sicher erreichen können, sagen wir Ihnen schriftlich zu, noch bevor Sie uns beauftragen.",
-    steps: [
-      { title: "Markt-Check Ihrer Region", text: "Suchvolumen, Wettbewerb und typische Auftragswerte in Ihrem Gebiet. Bevor Sie einen Euro ausgeben." },
-      { title: "Prognose aus Vergleichsprojekten", text: "Wir legen Ihr Angebot neben Projekte aus derselben Branche und rechnen aus, wie viele Anfragen realistisch sind." },
-      { title: "Zusage auf Papier", text: "Liegt Ihr Markt über unserem Schwellwert, sagen wir Ihnen eine Anzahl geprüfter Anfragen schriftlich zu. Ohne Sternchen." },
-    ],
-    bafa: {
-      logo: { src: "/images/bafa-berater.png", alt: "Gelisteter BAFA-Berater, Berater-ID 228969" },
-      text: "Zusätzlich prüfen wir als gelisteter BAFA-Berater, ob ein Teil der Beratungskosten gefördert werden kann.",
-    },
-    panel: {
-      eyebrow: "Beispiel: Markt-Check Region Regensburg",
-      offer: "Angebot: Badsanierung",
-      status: "Zusage möglich",
-      // Beispielwerte zur Veranschaulichung
-      rows: [
-        { label: "Suchanfragen pro Monat", sub: "im Umkreis von 40 km", value: "3.100", ratio: 0.78, tone: "accent" as const }, // TODO prüfen
-        { label: "Mitbewerber mit Anzeigen", sub: "in derselben Region", value: "12", ratio: 0.3, tone: "navy" as const }, // TODO prüfen
-        { label: "Erwartete geprüfte Anfragen", sub: "in 90 Tagen", value: "45 bis 60", ratio: 0.6, tone: "success" as const }, // TODO prüfen
-        { label: "Markt-Score", sub: "aus Nachfrage, Wettbewerb und Auftragswert", value: "8.4 / 10", ratio: 0.84, tone: "accent" as const }, // TODO prüfen
-      ],
-      promiseTitle: "Was wir schriftlich zusagen:",
-      promises: [
-        "Eine Mindestzahl geprüfter Anfragen in einem festen Zeitraum",
-        "Für welche Region und welches Angebot die Zusage gilt",
-        "Was passiert, falls wir die Zahl nicht erreichen",
-      ],
-      note: "Den Markt-Check bekommen Sie kostenlos, noch vor dem ersten Auftrag.",
-      cta: "Markt-Check anfragen",
-    },
-  },
-
-  // Zahlenband: vier Kennzahlen in einer Reihe
-  stats: {
-    items: [
-      { value: "280+", label: "Betriebe und Kanzleien", sub: "begleitet von der Atex Media Gruppe" }, // TODO prüfen
-      { value: "seit 2018", label: "für den Mittelstand", sub: "aus Regensburg" },
-      { value: "24 h", label: "bis zur Prüfung", sub: "jeder einzelnen Anfrage" }, // TODO prüfen
-      { value: "10", label: "Menschen im Team", sub: "Beratung, Kampagnen, Foto, Web" }, // TODO prüfen
-    ],
-  },
-
-  // 10 · Referenzen: sechs Projekte der Atex Media Gruppe (Angaben nach atex-media.de/referenzen).
-  // quote leer = Projektbeschreibung; mit freigegebenem Kundenzitat wird stattdessen das Zitat gezeigt.
-  references: {
-    eyebrow: "10 · Referenzen",
-    headlineBold: "Projekte aus dem Mittelstand,",
-    headlineLight: "umgesetzt von der Atex Media Gruppe",
-    cta: { label: "Alle Referenzen", href: "https://www.atex-media.de/referenzen" },
-    linkLabel: "Referenz ansehen",
-    items: [
-      {
-        client: "H24 GmbH",
-        short: "H24",
-        industry: "B2B-Software",
-        text: "Landingpages je Produkt, Entwicklung in Webflow und Suchmaschinenoptimierung. Anfragen aus ganz Deutschland kommen über die Landingpages in den Vertrieb.",
-        tag: "Landingpages",
-        href: "https://www.atex-media.de/referenzen/h24",
-        quote: "", // TODO Kundenzitat einholen
-      },
-      {
-        client: "Deventer Engineering",
-        short: "DE",
-        industry: "Energieberatung",
-        text: "Neue Webseite in Webflow, Suchmaschinenoptimierung und Leadgenerierung für die Energieberatung.",
-        tag: "Leadgenerierung",
-        href: "https://www.atex-media.de/referenzen/deventer-engineering",
-        quote: "", // TODO Kundenzitat einholen
-      },
-      {
-        client: "Innengrün",
-        short: "IG",
-        industry: "Onlinehandel",
-        text: "Onlineshop auf Shopify, neues Webdesign und die Betreuung der Social-Media-Kanäle aus einer Hand.",
-        tag: "Onlineshop",
-        href: "https://www.atex-media.de/referenzen/innengrun",
-        quote: "", // TODO Kundenzitat einholen
-      },
-      {
-        client: "2raumkonzept",
-        short: "2R",
-        industry: "Architektur",
-        text: "Relaunch der Webseite mit neuem Design, eigenem CMS und Fotografie vor Ort.",
-        tag: "Relaunch",
-        href: "https://www.atex-media.de/referenzen/2raumkonzept",
-        quote: "", // TODO Kundenzitat einholen
-      },
-      {
-        client: "Ingenieurbüro Gruber + Partner",
-        short: "GP",
-        industry: "Ingenieurwesen",
-        text: "Relaunch in Webflow, ein neues Erscheinungsbild und eine eigene Karriereseite.",
-        tag: "Rebranding",
-        href: "https://www.atex-media.de/referenzen/ingenieurburo-gruber-partner",
-        quote: "", // TODO Kundenzitat einholen
-      },
-      {
-        client: "Ahlborn Ingenieure",
-        short: "AI",
-        industry: "Ingenieurwesen",
-        text: "Relaunch in Webflow mit CMS und Suchmaschinenoptimierung, damit das Büro online gefunden wird.",
-        tag: "Sichtbarkeit",
-        href: "https://www.atex-media.de/referenzen/ahlborn-ingenieure",
-        quote: "", // TODO Kundenzitat einholen
-      },
-    ],
   },
 
   // Über-uns-Seite /ueber-uns
@@ -728,11 +424,9 @@ export const site = {
       title: "Quicklinks",
       items: [
         { label: "Startseite", href: "/" },
+        { label: "Engpass", href: "/#engpass" },
         { label: "Leistungen", href: "/#leistungen" },
         { label: "Ablauf", href: "/#ablauf" },
-        { label: "Methode", href: "/#methode" },
-        { label: "Referenzen", href: "/#referenzen" },
-        { label: "Zusage", href: "/#zusage" },
         { label: "Über uns", href: "/ueber-uns" },
         { label: "Karriere", href: "https://www.atex-media.de/karriere" },
         { label: "Kontakt", href: "/kontakt" },

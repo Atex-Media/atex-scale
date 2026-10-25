@@ -1,11 +1,10 @@
 import { site } from "@/content/site";
 import { Button } from "@/components/ui";
 import { Icon } from "@/components/icons";
-import { HeroGraph } from "@/components/sections/HeroGraph";
 
 /**
- * Hero, zentriert: Überzeile → Versprechen → zwei Buttons → Porträtreihe mit Kundenzahl,
- * darunter die Netzwerk-Grafik (Quellen → Anfragen-Eingang → Termin) und drei Kurz-Vorteile.
+ * Hero, zentriert: Überzeile → Versprechen → zwei Buttons → Porträtreihe mit Bewertung und
+ * Partnerbetrieben, darunter drei Kurz-Vorteile. Inhalte nach dem Whitepaper „Neue Kunden gewinnen“.
  */
 export function Hero() {
   const h = site.hero;
@@ -50,14 +49,12 @@ export function Hero() {
               ))}
             </span>
             <span className="text-muted">
-              <strong className="font-semibold text-ink">{h.proof.value}</strong> {h.proof.label}
+              <strong className="font-semibold text-ink">{h.proof.rating}</strong> · {h.proof.label}
             </span>
           </div>
         </div>
 
-        <HeroGraph className="mt-12 lg:mt-10" />
-
-        <ul className="mx-auto mt-10 grid max-w-[1200px] gap-4 md:grid-cols-3">
+        <ul className="mx-auto mt-14 grid max-w-[1200px] gap-4 md:grid-cols-3">
           {h.features.map((f) => {
             const I = Icon[f.icon];
             return (
