@@ -186,13 +186,15 @@ export const site = {
       certified: { src: "/images/wp/ueber/webflow-certified.svg", alt: "Webflow Certified Partner" },
       premium: { src: "/images/wp/ueber/webflow-premium.svg", alt: "Webflow Premium Partner" },
     },
-    // mark = hell hinterlegter Teil, rest = normaler Text danach
+    // Kennzahl groß, Beschreibung klein darunter
     facts: [
-      { mark: "+12 Mitarbeiter", rest: "" },
-      { mark: "+160 Partnerbetriebe", rest: "im Neukundenbereich" },
-      { mark: "", rest: "4 Fachbereiche" },
-      { mark: "akkreditierter Berater", rest: "beim Bundesamt für Wirtschaft und Ausfuhrkontrolle (BAFA)" },
+      { value: "12+", label: "Mitarbeiter im Team" },
+      { value: "160+", label: "Partnerbetriebe im Neukundenbereich" },
+      { value: "4", label: "Fachbereiche unter einem Dach" },
+      { value: "BAFA", label: "akkreditierter Berater beim Bundesamt für Wirtschaft und Ausfuhrkontrolle" },
     ],
+    photoLabel: "Unser Büro in Regensburg",
+    more: { label: "Mehr über uns", href: "/ueber-uns" },
     photo: { src: "/images/wp/ueber/gebaeude.png", alt: "Bürogebäude von Atex Media an der Kumpfmühler Straße in Regensburg" },
   },
 

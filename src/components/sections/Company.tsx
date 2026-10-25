@@ -1,54 +1,75 @@
 import { site } from "@/content/site";
+import { Icon } from "@/components/icons";
 
 /**
- * Über Atex Media (Whitepaper S. 3, Figma „03 Über uns“): links Adresse, Überschrift, Text und Siegel,
- * rechts die Kennzahlen mit hell hinterlegtem Anfang, darunter das Gebäudefoto. Der Himmel im Foto ist
- * transparent, so scheint der orange Verlauf oben links durch. Ab xl liegt der Text wie im Figma über dem Himmel.
+ * Über Atex Media (Whitepaper S. 3): links Adresse, Überschrift, Text, vier Kennzahl-Kacheln und die Siegel,
+ * rechts das Gebäudefoto in einer Karte. Der Himmel im Foto ist transparent, dahinter liegt ein heller oranger Verlauf.
  */
 export function Company() {
   const c = site.company;
   const b = c.badges;
   return (
-    <section id="ueber" className="relative overflow-hidden bg-[#f7f7f7]">
-      {/* Orange Schein oben links (Figma „glow“) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 aspect-[1123/794] blur-[5px]"
-        style={{ backgroundImage: "radial-gradient(ellipse 110% 77% at 9% -23%, rgba(242,107,75,0.3) 0%, rgba(242,107,75,0) 65%)" }}
-      />
-
-      <div className="container-x relative z-10 grid gap-10 pt-16 lg:grid-cols-[minmax(0,560px)_1fr] lg:gap-16 xl:absolute xl:inset-x-0 xl:top-0 xl:pt-[6.5%]">
-        <div>
+    <section id="ueber" className="section-y border-t border-[#efefec] bg-white">
+      <div className="container-x grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-16">
+        <div className="flex flex-col justify-center">
           <p className="flex items-center gap-1.5 text-[14px] font-semibold text-[#f26b4b]">
-            <span aria-hidden>📍</span>
+            <Icon.pin className="size-4 shrink-0" />
             {c.address}
           </p>
           <h2 className="mt-4 text-[clamp(2rem,3.4vw,2.75rem)] font-bold leading-[1.04] tracking-[-0.02em] text-[#231f20]">{c.headline}</h2>
           <p className="mt-5 max-w-[560px] text-[17px] leading-[1.5] text-[#6b6869]">{c.text}</p>
-          <div className="mt-8 flex flex-wrap items-center gap-6">
+
+          <ul className="mt-8 grid grid-cols-2 gap-3">
+            {c.facts.map((f) => (
+              <li key={f.value} className="rounded-[14px] border border-[#f1ece9] bg-[#fbf9f8] p-4 sm:p-5">
+                <p className="text-[clamp(1.6rem,2.4vw,2rem)] font-bold leading-none tracking-[-0.02em] text-[#231f20]">
+                  {f.value.endsWith("+") ? (
+                    <>
+                      {f.value.slice(0, -1)}
+                      <span className="text-[#f26b4b]">+</span>
+                    </>
+                  ) : (
+                    f.value
+                  )}
+                </p>
+                <p className="mt-2 text-[13px] leading-[1.35] text-[#6b6869] sm:text-[14px]">{f.label}</p>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={b.bafa.src} alt={b.bafa.alt} width={64} height={64} className="size-16 shrink-0 rounded-full" />
+            <img src={b.bafa.src} alt={b.bafa.alt} width={64} height={64} className="size-14 shrink-0 rounded-full" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={b.certified.src} alt={b.certified.alt} width={109} height={20} className="h-[26px] w-auto" />
+            <img src={b.certified.src} alt={b.certified.alt} width={109} height={20} className="h-[24px] w-auto" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={b.premium.src} alt={b.premium.alt} width={113} height={23} className="h-[29px] w-auto" />
+            <img src={b.premium.src} alt={b.premium.alt} width={113} height={23} className="h-[27px] w-auto" />
+            <a href={c.more.href} className="basis-full text-[15px] font-semibold text-[#231f20] underline-offset-4 hover:underline sm:ml-auto sm:basis-auto">
+              {c.more.label} ›
+            </a>
           </div>
         </div>
 
-        <ul className="flex flex-col gap-4 text-[16px] leading-[1.25] text-[#464646] lg:items-end lg:text-right">
-          {c.facts.map((f) => (
-            <li key={f.mark + f.rest} className="max-w-[260px]">
-              {f.mark && <span className="bg-[#fdebe5] [box-decoration-break:clone] px-0.5">{f.mark}</span>}
-              {f.mark && f.rest ? " " : ""}
-              {f.rest}
-            </li>
-          ))}
-        </ul>
+        {/* Foto-Karte: oranger Himmel hinter dem freigestellten Gebäude */}
+        <div
+          className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-[#f1ece9] lg:aspect-auto lg:min-h-[520px]"
+          style={{ backgroundImage: "radial-gradient(ellipse 90% 70% at 15% 0%, rgba(242,107,75,0.32) 0%, rgba(242,107,75,0) 70%), linear-gradient(180deg, #fde7df 0%, #fbf3f0 55%, #f7f5f4 100%)" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={c.photo.src}
+            alt={c.photo.alt}
+            width={1400}
+            height={932}
+            loading="lazy"
+            className="absolute inset-x-0 bottom-0 h-[88%] w-full object-cover object-bottom"
+          />
+          <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[12px] font-semibold text-[#231f20] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+            <Icon.building className="size-3.5 text-[#f26b4b]" />
+            {c.photoLabel}
+          </span>
+        </div>
       </div>
-
-      {/* Gebäudefoto: unter xl unter dem Text, ab xl über die ganze Sektion */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={c.photo.src} alt={c.photo.alt} width={1600} height={1067} loading="lazy" className="relative -mt-[6%] block w-full xl:mt-[2%]" />
     </section>
   );
 }
