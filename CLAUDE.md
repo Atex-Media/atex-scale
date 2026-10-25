@@ -8,8 +8,11 @@ Landingpage der Marke **Atex Scale** (Neukundengewinnung für den Mittelstand). 
 Kumpfmühler Str. 15, 93047 Regensburg, GF Daniel Meier. Schwesterprojekt von **AtexJobs** (`~/Documents/atexjobs`,
 Repo `vndno/atexjobs`, live www.atex-jobs.de) – gleiche Komponenten, gleiche Optik, **Akzentfarbe Orange statt Blau**.
 
-- Repo: `vndno/atex-scale` (Bindestrich!), Branch `main`, Vercel baut automatisch → https://atex-scale.vercel.app
-- Vercel-Projekt `atex-scale` (Team vndno). Env: CLOSE_API_KEY, RESEND_API_KEY, NOTIFY_TO (Production + Preview).
+- Repo: `Atex-Media/atex-scale` (GitHub-Organisation, öffentlich; vorher `vndno/atex-scale`), Branch `main` → https://atex-scale.vercel.app
+- Vercel-Projekt `atex-scale` (Team „Atex Media GmbH“, Slug `atexmedia`). Env: CLOSE_API_KEY, RESEND_API_KEY, NOTIFY_TO.
+- Stand 25.10.2026: Vercel baut nach einem Push NICHT automatisch (Git-Verknüpfung zeigt noch auf vndno/atex-scale).
+  Builds per Vercel-Tool `create_deployment` (gitSource github, org Atex-Media, repo atex-scale, ref main, sha) anstoßen.
+- Live-Seite blockt curl mit „Vercel Security Checkpoint“ → Live-Prüfung im Browser-Pane, Deploy-Status über Vercel-Tool.
 - Domain: noch keine (später z. B. atex-scale.de → dann NEXT_PUBLIC_SITE_URL setzen).
 
 ## Branding
@@ -48,13 +51,15 @@ Repo `vndno/atexjobs`, live www.atex-jobs.de) – gleiche Komponenten, gleiche O
 - Kontaktformular → `src/app/api/anfrage/route.ts`: Close-Lead mit Lead-Quelle „Inbound: Webseite - AtexScale“,
   Lead-Kanal „Website“; Mail über Resend (Absender anfrage@versand.atex-media.de, Domain ist verifiziert).
 
-## Aufbau der Startseite (seit 28.09.2026 nach trimando.at)
-Hero mit Netzwerk-Grafik → Logo-Band (dunkel) → `#engpass` 01 → `#leistungen` 02 System → `#ablauf` 03 → `#warum` 04 →
-`#methode` 05 → `#branchen` 06 → `#referenzen` 07 Case Study H24 → `#kampagnen` 08 Handy-Mockups → `#zusage` 09 →
-`#zahlen` → `#projekte` 10 Referenzen → `#kontakt` Schluss mit eingebettetem ContactForm. Keine FAQ, kein Rechner mehr.
+## Aufbau der Startseite (seit 25.10.2026 nach dem Whitepaper „Neue Kunden gewinnen“)
+Figma: Datei `pNNIkRVJ3qXkFiXB3PZmZP` („Atex Whitepaper Webseiten“), Seite „Whitepaper Scale“ (node 79-10804).
+Hero (Layout alt, ohne Grafik) → Logo-Band → `#engpass` (4 Karten) → `#ueber` Über Atex Media → `#leistungen` Das System →
+`#angebot` Stufe 1 → `#sichtbarkeit` Stufe 2 → `#vertrieb` Stufe 3 (Board) → `#branchen` Privat/Geschäftskunden (Layout alt)
+→ `#ablauf` Der Ablauf (alt) → `#kontakt` Schluss mit Formular (alt). Figma-Grafiken liegen unter `public/images/wp/`
+und werden mit `src/components/figma.tsx` (Zeichenfläche in Figma-Maßen, Positionen in %, Schrift in cqw) nachgebaut.
 
 ## Bekannte offene Punkte
-- Bilder: `referenzen/h24.jpg` (16:10), echtes `og-image.jpg`, Wistia-ID für das Erklärvideo (`site.platform.video.id`).
-- Zahlen mit `TODO prüfen` bestätigen (280+ Betriebe, 24 h, 10 im Team, Dashboard- und Markt-Check-Beispielwerte,
-  Phasen-Zeiträume der Methode, H24-Startjahr).
-- Kundenzitate fehlen: Referenzkarten zeigen Projektbeschreibungen; freigegebene Zitate in `site.references.items[].quote`.
+- Vercel-Git-Verknüpfung auf `Atex-Media/atex-scale` umstellen, damit Pushes wieder automatisch bauen.
+- Bilder: echtes `og-image.jpg` (aktuell Bürofoto). Google-Bewertung 4,8 (Hero) ohne Link zum Google-Profil.
+- Zahlen mit `TODO prüfen` in site.ts (24 h, Calendly-Dauer, Über-uns-Seite: 14 Tage, 280+ auf /ueber-uns).
+- „Schriftliche Zusage“ steht noch im Schluss-Text und im Seitentitel (meta), kommt im Whitepaper nicht vor.

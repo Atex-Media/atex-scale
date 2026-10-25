@@ -15,7 +15,7 @@ export function Audiences() {
   const a = site.audiences;
   const m = a.media;
   return (
-    <section id="branchen" className="section-y bg-white">
+    <section id="branchen" className="section-y border-t border-[#efefec] bg-white">
       <div className="container-x grid items-center gap-12 lg:grid-cols-[1fr_500px] lg:gap-16 xl:grid-cols-[1fr_540px]">
         <div>
           <Heading eyebrow={a.eyebrow} bold={a.headlineBold} light={a.headlineLight} />

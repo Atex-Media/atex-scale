@@ -31,7 +31,7 @@ export function Process() {
   const PhIcon = Icon[ph.icon];
 
   return (
-    <section id="ablauf" className="section-y bg-white">
+    <section id="ablauf" className="section-y border-t border-[#efefec] bg-white">
       <div className="container-x">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end lg:gap-16">
           <Heading eyebrow={p.eyebrow} bold={p.headlineBold} light={p.headlineLight} />

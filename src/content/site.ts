@@ -408,27 +408,27 @@ export const site = {
     ],
   },
 
-  // Privat- und Geschäftskunden: links Text + zwei Karten (B2C/B2B), rechts Foto-Karte Erstgespräch
+  // Privat- und Geschäftskunden (Inhalte nach Whitepaper S. 8, Layout wie bisher): links Text + zwei Karten (B2C/B2B), rechts Foto-Karte Erstgespräch
   audiences: {
     eyebrow: "Privat- und Geschäftskunden",
     headlineBold: "Für Privatkunden,",
     headlineLight: "genauso wie für Geschäftskunden",
-    text: "Ob jemand ein neues Bad plant oder ein Unternehmen einen Steuerberater sucht: Ohne Vertrauen fällt keine Entscheidung. Der Weg dahin ist unterschiedlich lang, der Ablauf dahinter bleibt derselbe.",
-    text2: "Handwerksbetriebe, Praxen, Kanzleien und Ingenieurbüros setzen auf denselben Mechanismus: sichtbar sein, bis der Bedarf da ist, und dann als Erste sauber antworten.",
+    text: "Ob Sie Generalunternehmer, Hausverwaltungen und Industrie beliefern oder Eigenheimbesitzer – das System ist dasselbe. Was sich ändert, ist, wo Ihre Kunden suchen und wie wir sie erreichen.",
+    text2: "Viele Betriebe haben beides – dann bauen wir das System für den Teil, der wachsen soll, und erweitern später.",
     groups: [
       {
         tag: "Privatkunden · B2C",
         tone: "accent" as const,
         title: "Schnelle Entscheidung, viel Vergleich",
-        text: "Wer ein Angebot sucht, holt oft drei ein. Den Auftrag bekommt, wer schnell antwortet und vertrauenswürdig wirkt.",
-        items: ["Handwerk und Sanierung", "Heizung, Solar und Energie", "Zahnarzt- und Arztpraxen", "Pflege und Gesundheit"],
+        text: "Eigenheimbesitzer und Bauherren: einmaliger Auftrag, Vertrauen entscheidet. Angebotsseite mit Preisrahmen, Bewertungen, WhatsApp und Terminbuchung; Rückruf in 24 Stunden, Termin vor Ort.",
+        items: ["Dach und Fenster", "PV und Elektro", "Bad und Sanitär", "Garten"],
       },
       {
         tag: "Geschäftskunden · B2B",
         tone: "navy" as const,
         title: "Lange Entscheidung, mehrere Beteiligte",
-        text: "Entscheider vergleichen über Wochen. Regelmäßige Präsenz sorgt dafür, dass Sie gefragt werden, wenn der Bedarf entsteht.",
-        items: ["Steuer- und Anwaltskanzleien", "Ingenieur- und Planungsbüros", "Software und IT", "Industrie und Zulieferer"],
+        text: "Bauleiter, Einkäufer, Hausverwalter und Planer – oft unter Zeitdruck, oft für wiederkehrende Aufträge. Sichtbar über Google und Fachbegriffe, dazu LinkedIn und Mailing an eine Zielkundenliste.",
+        items: ["Elektro und Gebäudetechnik", "Metallbau und Transport", "Bauunternehmen", "Ingenieurbüros"],
       },
     ],
     media: {
