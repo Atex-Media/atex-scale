@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Atex Scale",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Atex Scale – Neue Kunden gewinnen mit schriftlicher Zusage" }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: site.meta.title }],
   },
   twitter: { card: "summary_large_image", title: site.meta.title, description: site.meta.description, images: ["/images/og-image.jpg"] },
   applicationName: "Atex Scale",

@@ -12,7 +12,7 @@
 
 export const site = {
   meta: {
-    title: "Atex Scale – Neue Kunden gewinnen mit schriftlicher Zusage",
+    title: "Atex Scale – Neue Kunden gewinnen ohne Kaltakquise und Portale",
     description:
       "Atex Scale bringt mittelständischen Betrieben qualifizierte Anfragen und gebuchte Termine: Kampagnen auf Meta, Google und LinkedIn, Landingpage, Qualifizierung jeder Anfrage binnen 24 Stunden. Vorab geprüft, schriftlich zugesagt.",
   },
