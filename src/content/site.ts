@@ -237,6 +237,52 @@ export const site = {
     },
   },
 
+  // Stufe 2 · Zielgruppen-Sichtbarkeit (Whitepaper S. 6): drei Mockups (Google-Treffer, KI-Antwort, Anzeige) mit Text darunter
+  visibility: {
+    eyebrow: "Stufe 2 · Zielgruppen-Sichtbarkeit",
+    headline: "Sichtbar, wo Ihre Kunden suchen –",
+    headlineAccent: "mit Schlagzahl.",
+    text: "Ihre Kunden suchen auf drei Wegen: bei Google, in KI-Antworten und über Anzeigen. Wir sorgen dafür, dass Sie dort auftauchen – mit Schlagzahl: Anzeigen ab Tag 1, wöchentlich nachgeschärft, Budget dorthin, wo Anfragen entstehen.",
+    channels: [
+      { tag: "Ausbau · SEO", title: "Dauerhaft gefunden werden", text: "Leistungsseiten und Unternehmensprofil bringen Sie bei „Leistung + Ort“ nach oben – ohne Klickkosten. Baut sich über Monate auf und bleibt." },
+      { tag: "Ausbau · GEO", title: "Empfohlen in KI-Antworten", text: "Immer mehr Kunden fragen ChatGPT oder die Google-KI nach einem Anbieter. Wir sorgen dafür, dass Ihr Name dort fällt – mit Quelle." },
+      { tag: "Basis · Google Ads", title: "Ab Tag 1 sichtbar – mit Schlagzahl", text: "Google-Anzeigen auf Kaufabsicht im Einzugsgebiet, jede Woche optimiert: Suchbegriffe, Gebote, Budget auf die Leistung mit den meisten Anfragen. Meta oder LinkedIn, wenn Ihre Zielgruppe dort ist." },
+    ],
+    seo: {
+      label: "SEO · Google-Suche",
+      url: "google.de/search?q=elektriker+regensburg",
+      query: "Elektriker Regensburg",
+      domain: "ihre-webseite.de",
+      crumb: "› Startseite",
+      title: "Ihr Elektrotechnikbetrieb in Regensburg – Meisterbetrieb",
+      desc: "Elektroinstallation, Smart Home und PV-Anlagen. Schnelle Terminvergabe, faire Preise.",
+      rank: "1",
+      rankLabel: "Platz",
+      footer: "Dauerhaft sichtbar · ohne Klickkosten",
+    },
+    geo: {
+      label: "GEO · KI-Antworten",
+      model: "ChatGPT  ▾",
+      question: "Welcher Elektriker in Regensburg ist empfehlenswert?",
+      answerBefore: "Empfehlenswert ist ",
+      answerName: "Ihr Betrieb",
+      answerAfter: " in Regensburg. Der Meisterbetrieb übernimmt Elektroinstallationen, Smart Home und PV-Anlagen und wird von Kunden aus der Region sehr gut bewertet.",
+      source: "Quelle: ihre-webseite.de",
+      note: "Auch in Perplexity, Gemini und der Google-KI.",
+      input: "Frage stellen …",
+    },
+    ads: {
+      label: "Ads · Aktive Werbung",
+      channels: "Google · Meta Ads",
+      account: "Ihr Betrieb",
+      sponsored: "Gesponsert",
+      text: "Elektrotechnik aus Regensburg. Jetzt kostenlosen Beratungstermin sichern.",
+      button: "Mehr dazu",
+      hint: "Ab Tag 1 sichtbar",
+      photo: "/images/wp/sichtbar/werbefoto.jpg",
+    },
+  },
+
   // Der Ablauf: vier Reiter links, Detail rechts (Text + vier Kärtchen), darunter der Kreislauf als Leiste
   process: {
     eyebrow: "Der Ablauf",

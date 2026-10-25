@@ -5,6 +5,7 @@ import { Problem } from "@/components/sections/Problem";
 import { Company } from "@/components/sections/Company";
 import { System } from "@/components/sections/System";
 import { Offer } from "@/components/sections/Offer";
+import { Visibility } from "@/components/sections/Visibility";
 import { Process } from "@/components/sections/Process";
 import { Audiences } from "@/components/sections/Audiences";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -26,6 +27,7 @@ export default function Home() {
         <Company />
         <System />
         <Offer />
+        <Visibility />
         <Audiences />
         <Process />
         <FinalCta />
