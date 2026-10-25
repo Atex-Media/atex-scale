@@ -283,6 +283,70 @@ export const site = {
     },
   },
 
+  // Stufe 3 · Vertrieb & Automatisierung (Whitepaper S. 7): Anfragen-Board mit fünf Spalten und Kennzahlen (schematisch)
+  sales: {
+    eyebrow: "Stufe 3 · Vertrieb & Automatisierung",
+    headlineBold: "Jede Anfrage kommt an, wird geprüft",
+    headlineLight: "– und Sie sehen, was daraus wird.",
+    text: "Anfragen laufen in ein gemeinsames Board: Wir bestätigen in der ersten Minute, prüfen Name, Kontakt, Bedarf und Standort und markieren, was Atex-Scale-qualifiziert ist. Sie rufen zurück, schieben die Karte weiter – und sehen am Monatsende, welche Anfragen zu Aufträgen wurden.",
+    board: {
+      title: "Anfragen · Oktober",
+      sub: "Ø Erstantwort 48 Sek · Ø Rückruf 3 h 10 Min",
+      live: "Live · 10 Anfragen",
+      // tone: plain = neu, hot = qualifiziert/weiter, muted = abgelehnt · source = Punktfarbe der Quelle
+      columns: [
+        {
+          title: "Neu eingegangen",
+          bar: "#8a8a86",
+          cards: [
+            { source: "Google Ads", dot: "google-ads", time: "vor 4 Min", title: "Wallbox-Installation", who: "Fam. Huber · Regensburg", status: "Bestätigung gesendet", value: "", tone: "plain" as const },
+            { source: "Webseite", dot: "webseite", time: "vor 26 Min", title: "PV-Anlage 12,2 kWp", who: "HN Gewerbebau GmbH", status: "Bestätigung gesendet", value: "", tone: "plain" as const },
+          ],
+        },
+        {
+          title: "Qualifiziert",
+          bar: "#f26b4b",
+          cards: [
+            { source: "Google Ads", dot: "google-ads", time: "heute", title: "Bad-Sanierung komplett", who: "Fam. Wagner · Neutraubl.", status: "Rückruf offen · bis 16:00", value: "ca. 18.400 €", tone: "hot" as const },
+            { source: "LinkedIn", dot: "linkedin", time: "gestern", title: "Hallenbeleuchtung LED", who: "Kaiser GmbH · Regenstauf", status: "Rückruf offen", value: "ca. 9.500 €", tone: "hot" as const },
+          ],
+        },
+        {
+          title: "Kontaktiert",
+          bar: "#231f20",
+          cards: [
+            { source: "Google Ads", dot: "google-ads", time: "Mo", title: "Smart-Home-Nachrüstung", who: "T. Berger · Barbing", status: "Termin vor Ort · Do 14:00", value: "ca. 6.200 €", tone: "hot" as const },
+            { source: "Mailing", dot: "mailing", time: "Fr", title: "Wartung DGUV V3", who: "Hiendl + Partner", status: "Angebot verschickt", value: "ca. 4.800 € / Jahr", tone: "hot" as const },
+          ],
+        },
+        {
+          title: "Abgeschlossen",
+          bar: "#2f8f5b",
+          cards: [
+            { source: "Google Ads", dot: "google-ads", time: "KW 41", title: "Wallbox + Unterverteilung", who: "Fam. Lohrmeier · Regensburg", status: "Auftrag erteilt", value: "3.900 €", tone: "hot" as const },
+            { source: "Google Suche", dot: "google-suche", time: "KW 40", title: "PV + Speicher", who: "Fam. Huber · Lappersdorf", status: "Auftrag erteilt", value: "18.400 €", tone: "hot" as const },
+          ],
+        },
+        {
+          title: "Abgelehnt",
+          bar: "#c8463a",
+          cards: [
+            { source: "Google Ads", dot: "google-ads", time: "KW 41", title: "Elektroinstallation Neubau", who: "Anfrage aus Hamburg", status: "Außerhalb Einzugsgebiet", value: "", tone: "muted" as const },
+          ],
+        },
+      ],
+      kpis: [
+        { value: "10", label: "Anfragen im Monat", accent: false },
+        { value: "7", label: "Atex-Scale-qualifiziert", accent: false },
+        { value: "2", label: "Aufträge erteilt", accent: false },
+        { value: "22.300 €", label: "Auftragsvolumen", accent: true },
+        { value: "48 Sek", label: "Ø Erstantwort", accent: false },
+      ],
+    },
+    note: "Board-Ansicht schematisch · Das Siegel markiert Atex-Scale-qualifizierte Anfragen: Name, Kontakt, konkreter Bedarf und Standort im Einzugsgebiet geprüft.",
+    swipe: "Zum Ansehen seitlich wischen",
+  },
+
   // Der Ablauf: vier Reiter links, Detail rechts (Text + vier Kärtchen), darunter der Kreislauf als Leiste
   process: {
     eyebrow: "Der Ablauf",
