@@ -20,12 +20,14 @@ const graphics = [
 export function System() {
   const s = site.system;
   return (
-    <section
-      id="leistungen"
-      className="section-y text-white"
-      style={{ backgroundImage: "linear-gradient(180deg, rgba(102,102,102,0) 0%, rgba(0,0,0,0.8) 100%), linear-gradient(90deg, #6a6a6a, #6a6a6a)" }}
-    >
-      <div className="container-x">
+    <section id="leistungen" className="section-y relative overflow-hidden bg-navy-2 text-white">
+      {/* Hintergrund wie der Schluss-CTA: Punktraster + orange getönter Schein oben links */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 opacity-[0.045]" style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1.2px)", backgroundSize: "28px 28px" }} />
+        <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(50% 60% at 15% 20%, rgba(242,106,74,0.16) 0%, rgba(242,106,74,0) 100%)" }} />
+      </div>
+
+      <div className="container-x relative">
         <div className="grid gap-5 lg:grid-cols-[1.1fr_1fr] lg:items-end lg:gap-16">
           <div>
             <p className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#f26b4b]">{s.eyebrow}</p>
@@ -33,7 +35,7 @@ export function System() {
               <span className="font-semibold">{s.headlineBold}</span> <span className="font-light">{s.headlineLight}</span>
             </h2>
           </div>
-          <p className="text-[17px] leading-[1.5] text-[#d6d6d6]">{s.text}</p>
+          <p className="text-[17px] leading-[1.5] text-on-navy-muted">{s.text}</p>
         </div>
 
         {/* Die drei Stufen als Ablauf */}
@@ -46,7 +48,7 @@ export function System() {
         {/* Ergebnis-Leiste mit Prüfpunkten und Maßstab */}
         <div
           className="mt-5 rounded-[18px] p-6 shadow-[0_0_8px_rgba(242,107,75,0.27)] md:px-8 md:py-7"
-          style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0.73), rgba(0,0,0,0.73)), linear-gradient(95.4deg, #f26b4b 9%, #442016 90%)" }}
+          style={{ backgroundImage: "linear-gradient(90deg, rgba(14,23,33,0.74), rgba(14,23,33,0.74)), linear-gradient(95.4deg, #f26b4b 9%, #442016 90%)" }}
         >
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
             <p className="flex items-center gap-3 text-[19px] font-semibold leading-snug">
@@ -88,7 +90,7 @@ function StageCard({
   const s = site.system;
   return (
     <li className="relative">
-      <div className="flex h-full flex-col overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(180deg,#1c1c1c,#000000)] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+      <div className="flex h-full flex-col overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(180deg,#1a2633,#0e1721)] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
         <div className="relative h-[170px] overflow-hidden border-b border-white/[0.06] lg:h-[190px]">
           <span
             aria-hidden
@@ -120,7 +122,7 @@ function StageCard({
       {arrow && (
         <span
           aria-hidden
-          className="absolute -right-[28px] top-[67px] z-10 hidden size-9 place-items-center rounded-full border border-white/15 bg-[#232323] text-[16px] text-[#e6e6e2] shadow-[0_4px_12px_rgba(0,0,0,0.35)] md:grid lg:top-[77px]"
+          className="absolute -right-[28px] top-[67px] z-10 hidden size-9 place-items-center rounded-full border border-white/15 bg-navy-card text-[16px] text-[#e6e6e2] shadow-[0_4px_12px_rgba(0,0,0,0.35)] md:grid lg:top-[77px]"
         >
           →
         </span>
@@ -135,7 +137,7 @@ function Lasting() {
   const { pos, px } = figmaScale(273, 226);
   const y = (v: number) => v - 210;
   return (
-    <div className="mt-5 grid overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(180deg,#1c1c1c,#000000)] md:grid-cols-2 md:items-end lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:gap-10">
+    <div className="mt-5 grid overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(180deg,#1a2633,#0e1721)] md:grid-cols-2 md:items-end lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:gap-10">
       <div className="p-6 md:self-center md:p-10 lg:pl-14">
         <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#f26b4b]">{l.eyebrow}</p>
         <h3 className="mt-2 text-[clamp(1.5rem,2.4vw,1.9rem)] font-semibold leading-[1.15]">{l.title}</h3>
