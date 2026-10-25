@@ -196,49 +196,23 @@ export const site = {
     photo: { src: "/images/wp/ueber/gebaeude.png", alt: "Bürogebäude von Atex Media an der Kumpfmühler Straße in Regensburg" },
   },
 
-  // 02 · Das System: links fünf Schritte, rechts Live-Dashboard (Eingaben → Anfragen-Eingang → Stufen → Kennzahlen)
-  platform: {
-    eyebrow: "02 · Das System",
-    headlineBold: "Ein Ablauf,",
-    headlineLight: "der neue Kunden planbar macht",
-    text: "Wir übernehmen den ganzen Weg von der ersten Anzeige bis zum gebuchten Termin. Sie sprechen nur noch mit Menschen, die Ihr Angebot brauchen, in Ihrer Region sind und ein Budget eingeplant haben.",
-    stepsTitle: "Wie wir vorgehen",
-    steps: [
-      { title: "Markt-Check", text: "Wie oft wird Ihr Angebot in Ihrer Region gesucht? Das klären wir, bevor Sie etwas investieren." },
-      { title: "Angebot zuspitzen", text: "Wir bringen Ihr Angebot so auf den Punkt, dass Ihr Wunschkunde es in Sekunden versteht." },
-      { title: "Kampagnen auf acht Kanälen", text: "Meta, Google, LinkedIn, YouTube und weitere. Aufgesetzt und betreut von uns." },
-      { title: "Prüfung jeder Anfrage", text: "Binnen 24 Stunden klären wir Bedarf, Ort, Zeitpunkt und Budget." }, // TODO prüfen (24 h)
-      { title: "Termin in Ihrem Kalender", text: "Nur wer passt, bekommt einen Termin bei Ihnen. Darum geht es am Ende." },
+  // Das System (Whitepaper S. 4): drei Stufen, Ergebnis-Leiste, Maßstab, Karte „Nachhaltig“
+  system: {
+    eyebrow: "Das System",
+    headlineBold: "Wir liefern Anfragen.",
+    headlineLight: "Sie machen die Aufträge.",
+    text: "Atex Scale ist Ihr externer Vertrieb: drei Stufen, die aus Suchenden Anfragen und aus Anfragen Aufträge machen – aufgebaut auf einer Seite, die nur für Ihr Angebot da ist.",
+    stages: [
+      { title: "Angebot", text: "Wir definieren, was Sie verkaufen: Leistung, Vorzüge, Preisrahmen und das, was Sie besonders macht – und bauen daraus Ihre Angebotsseite auf Ihrer Webseite." },
+      { title: "Zielgruppen-Sichtbarkeit", text: "Wer Ihre Leistung sucht, findet Sie – über Google-Anzeigen, Ihr Unternehmensprofil, SEO und, wo es passt, Meta oder LinkedIn." },
+      { title: "Vertrieb & Automatisierung", text: "Jede Anfrage wird in der ersten Minute beantwortet, an Sie weitergeleitet und bis zur Entscheidung nachgefasst – automatisiert, mit Dashboard." },
     ],
-    dashboard: {
-      title: "Atex Scale · Live",
-      inputs: [
-        { label: "Ihr Angebot", icon: "target" as const, tone: "accent" as const },
-        { label: "Ihre Region", icon: "pin" as const, tone: "success" as const },
-        { label: "Ihr Wunschkunde", icon: "users" as const, tone: "creme" as const },
-        { label: "Auftragswert", icon: "chartLine" as const, tone: "chip" as const },
-      ],
-      engine: { title: "Anfragen-Eingang", sub: "Kampagnen und Prüfung laufen", status: "Live" },
-      stages: [
-        { label: "Angefragt", icon: "message" as const, tone: "accent" as const },
-        { label: "Geprüft", icon: "check" as const, tone: "success" as const },
-        { label: "Termin", icon: "calendar" as const, tone: "creme" as const },
-      ],
-      // Beispielwerte zur Veranschaulichung – durch echte Werte aus einem Projekt ersetzen
-      kpis: [
-        { value: "+22", label: "Anfragen im Monat" }, // TODO prüfen
-        { value: "64 %", label: "passen zum Angebot" }, // TODO prüfen
-        { value: "38 €", label: "je geprüfte Anfrage" }, // TODO prüfen
-      ],
-      note: "Beispielwerte zur Veranschaulichung",
-    },
-    // Video unter der Sektion (Wistia). Ohne ID wird der Block nicht angezeigt.
-    video: {
-      id: "", // TODO Video-ID eintragen (Erklärvideo „So arbeitet Atex Scale“)
-      heading: "So arbeitet Atex Scale",
-      title: "So arbeitet Atex Scale",
-      label: "Erklärvideo",
-      poster: "/images/ueber-uns/beratung.jpg",
+    result: { title: "Das Ergebnis: Atex-Scale-qualifizierte Anfragen", text: "Name · Kontakt · konkreter Bedarf · Standort in Ihrem Einzugsgebiet" },
+    definition: "Alles andere zählen wir nicht. Sie bekommen nur Anfragen, die Sie auch beauftragen können – das ist unser Maßstab in jedem Review.",
+    lasting: {
+      eyebrow: "Nachhaltig",
+      title: "Was wir aufbauen, bleibt bei Ihnen.",
+      text: "Angebotsseite, Unternehmensprofil, Bewertungen, Abläufe und Zahlen gehören zu Ihrem Betrieb. Das System wirkt über die Laufzeit hinaus – und wird mit jedem Monat günstiger pro Anfrage.",
     },
   },
 

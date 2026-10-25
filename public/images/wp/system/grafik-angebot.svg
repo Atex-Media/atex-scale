@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="238.375" height="259.971" viewBox="0 0 238.375 259.971" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/Grafik" opacity="0.9">
+<path id="Rectangle" opacity="0.35" d="M135.509 91.1955L230.598 114.904C235.528 116.133 238.529 121.126 237.299 126.056L205.85 252.195C204.62 257.125 199.627 260.125 194.697 258.896L99.6082 235.187C94.6781 233.958 91.678 228.965 92.9072 224.035L124.357 97.8965C125.586 92.9664 130.579 89.9662 135.509 91.1955Z" stroke-width="1.6" stroke="url(#paint0_linear_0_63)"/>
+<path id="Rectangle_2" opacity="0.8" d="M121.862 97.8409L219.325 108.085C224.378 108.616 228.044 113.143 227.513 118.196L213.924 247.484C213.393 252.537 208.866 256.203 203.813 255.672L106.35 245.428C101.296 244.897 97.6305 240.37 98.1616 235.317L111.75 106.029C112.281 100.976 116.808 97.3098 121.862 97.8409Z" stroke-width="1.6" stroke="url(#paint1_linear_0_63)"/>
+<path id="Line" opacity="0.55" d="M131.927 127.304L203.927 119.744" stroke-width="1.4" stroke="#F26B4B"/>
+<path id="Line_2" opacity="0.55" d="M133.927 145.304L197.927 138.584" stroke-width="1.4" stroke="#F26B4B"/>
+<path id="Line_3" opacity="0.55" d="M135.927 163.304L187.927 157.844" stroke-width="1.4" stroke="#F26B4B"/>
+<path id="Ellipse" opacity="0.9" d="M211.2 118C211.2 126.395 204.395 133.2 196 133.2C187.605 133.2 180.8 126.395 180.8 118C180.8 109.605 187.605 102.8 196 102.8C204.395 102.8 211.2 109.605 211.2 118Z" stroke-width="1.6" stroke="url(#paint2_linear_0_63)"/>
+<circle id="Ellipse_2" opacity="0.9" cx="196" cy="118" r="6" fill="#F26B4B"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_63" x1="107.856" y1="160.772" x2="222.351" y2="189.319" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F26B4B"/>
+<stop offset="1" stop-color="#F26B4B" stop-opacity="0.15"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_63" x1="104.16" y1="170.589" x2="221.514" y2="182.924" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F26B4B"/>
+<stop offset="1" stop-color="#F26B4B" stop-opacity="0.15"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_63" x1="180" y1="118" x2="212" y2="118" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F26B4B"/>
+<stop offset="1" stop-color="#F26B4B" stop-opacity="0.15"/>
+</linearGradient>
+</defs>
+</svg>

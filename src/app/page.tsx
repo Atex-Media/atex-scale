@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { LogoMarquee } from "@/components/sections/LogoMarquee";
 import { Problem } from "@/components/sections/Problem";
 import { Company } from "@/components/sections/Company";
-import { Platform } from "@/components/sections/Platform";
+import { System } from "@/components/sections/System";
 import { Process } from "@/components/sections/Process";
 import { Audiences } from "@/components/sections/Audiences";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -23,7 +23,7 @@ export default function Home() {
         <LogoMarquee />
         <Problem />
         <Company />
-        <Platform />
+        <System />
         <Audiences />
         <Process />
         <FinalCta />
