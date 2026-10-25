@@ -8,11 +8,11 @@ Landingpage der Marke **Atex Scale** (Neukundengewinnung für den Mittelstand). 
 Kumpfmühler Str. 15, 93047 Regensburg, GF Daniel Meier. Schwesterprojekt von **AtexJobs** (`~/Documents/atexjobs`,
 Repo `vndno/atexjobs`, live www.atex-jobs.de) – gleiche Komponenten, gleiche Optik, **Akzentfarbe Orange statt Blau**.
 
-- Repo: `Atex-Media/atex-scale` (GitHub-Organisation, öffentlich; vorher `vndno/atex-scale`), Branch `main` → https://atex-scale.vercel.app
+- Repo: `Atex-Media/atex-scale` (GitHub-Organisation, öffentlich; vorher `vndno/atex-scale`), Branch `main` → https://www.atex-scale.de
 - Vercel-Projekt `atex-scale` (Team „Atex Media GmbH“, Slug `atexmedia`). Env: CLOSE_API_KEY, RESEND_API_KEY, NOTIFY_TO.
-- Stand 25.10.2026: Vercel baut nach einem Push NICHT automatisch (Git-Verknüpfung zeigt noch auf vndno/atex-scale).
-  Builds per Vercel-Tool `create_deployment` (gitSource github, org Atex-Media, repo atex-scale, ref main, sha) anstoßen.
-- Live-Seite blockt curl mit „Vercel Security Checkpoint“ → Live-Prüfung im Browser-Pane, Deploy-Status über Vercel-Tool.
+- Seit 25.10.2026 mit `Atex-Media/atex-scale` neu verknüpft: jeder Push auf `main` baut automatisch (Production, ~1 Min).
+  Status über das Vercel-Tool (`list_deployments` mit sha) prüfen; `create_deployment` nur noch im Notfall.
+- atex-scale.vercel.app blockt curl mit „Vercel Security Checkpoint“; www.atex-scale.de nicht → dort per curl prüfen.
 - Domain: www.atex-scale.de (Hauptadresse) + atex-scale.de (308 → www) seit 25.10.2026 im Vercel-Projekt;
   NEXT_PUBLIC_SITE_URL = https://www.atex-scale.de (Production). Domain wird bei All-Inkl registriert/verwaltet
   (wie atex-media.de, atex-jobs.de); DNS dort: A @ → 216.150.1.1 und 216.150.16.1, CNAME www → bffa00f9b25b3725.vercel-dns-017.com.
@@ -42,7 +42,7 @@ Repo `vndno/atexjobs`, live www.atex-jobs.de) – gleiche Komponenten, gleiche O
 - Vorschau: `next start` des Produktions-Builds (der Dev-Server lieferte einmal veraltetes Tailwind-CSS). Screenshots per
   Headless-Chrome (`--headless=new --screenshot --window-size=1440,12500`); unter ~500 px Breite schneidet Headless-Chrome ab →
   Handy nur per Browser-Pane-Emulation (375 px) und DOM-Messung prüfen.
-- Nach dem Push: `curl` gegen https://atex-scale.vercel.app pollen (Deploy ~30–40 s), DOM mit dem Browser-Pane
+- Nach dem Push: `curl` gegen https://www.atex-scale.de pollen (Deploy ~1 Min), DOM mit dem Browser-Pane
   (`javascript_tool`) messen. Screenshots dieser Origin schlagen oft fehl → Text/DOM prüfen.
 - Build-Fehler: Vercel-Dashboard im Chrome des Nutzers (claude-in-chrome) öffnen → Projekt atex-scale → Deployments →
   Eintrag anklicken → Build Logs lesen. Tabs danach schließen. Erster Fehler war eine leere NEXT_PUBLIC_SITE_URL (behoben).
@@ -64,7 +64,6 @@ Ablauf mit Grafik-Feld). Das Vertriebs-Board (`SalesBoard.tsx`, @dnd-kit) ist ve
 Tastatur; Status, Wert und Kennzahlen richten sich nach der Spalte, Karten und Spalten stehen in `site.sales.board`.
 
 ## Bekannte offene Punkte
-- Vercel-Git-Verknüpfung auf `Atex-Media/atex-scale` umstellen, damit Pushes wieder automatisch bauen.
 - Bilder: echtes `og-image.jpg` (aktuell Bürofoto). Google-Bewertung 4,8 (Hero) ohne Link zum Google-Profil.
 - Zahlen mit `TODO prüfen` in site.ts (24 h, Calendly-Dauer, Über-uns-Seite: 14 Tage, 280+ auf /ueber-uns).
 - „Schriftliche Zusage“ steht noch im Schluss-Text und im Seitentitel (meta), kommt im Whitepaper nicht vor.
