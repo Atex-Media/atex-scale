@@ -176,6 +176,26 @@ export const site = {
     cta: "Engpass besprechen",
   },
 
+  // Über Atex Media (Whitepaper S. 3): Adresse, Text, Siegel, Kennzahlen rechts, Gebäudefoto darunter
+  company: {
+    address: "Kumpfmühler Str. 15, 93047 Regensburg",
+    headline: "Über Atex Media.",
+    text: "Wir sind ein eingespieltes Team aus Regensburg für Entwicklung, Sichtbarkeit und Neukundengewinnung. Bei uns haben Sie einen festen Ansprechpartner, vom ersten Gespräch bis zur ersten Anfrage.",
+    badges: {
+      bafa: { src: "/images/bafa-berater.png", alt: "Gelisteter BAFA-Berater, Berater-ID 228969" },
+      certified: { src: "/images/wp/ueber/webflow-certified.svg", alt: "Webflow Certified Partner" },
+      premium: { src: "/images/wp/ueber/webflow-premium.svg", alt: "Webflow Premium Partner" },
+    },
+    // mark = hell hinterlegter Teil, rest = normaler Text danach
+    facts: [
+      { mark: "+12 Mitarbeiter", rest: "" },
+      { mark: "+160 Partnerbetriebe", rest: "im Neukundenbereich" },
+      { mark: "", rest: "4 Fachbereiche" },
+      { mark: "akkreditierter Berater", rest: "beim Bundesamt für Wirtschaft und Ausfuhrkontrolle (BAFA)" },
+    ],
+    photo: { src: "/images/wp/ueber/gebaeude.png", alt: "Bürogebäude von Atex Media an der Kumpfmühler Straße in Regensburg" },
+  },
+
   // 02 · Das System: links fünf Schritte, rechts Live-Dashboard (Eingaben → Anfragen-Eingang → Stufen → Kennzahlen)
   platform: {
     eyebrow: "02 · Das System",
