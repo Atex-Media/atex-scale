@@ -205,11 +205,13 @@ export const site = {
     headlineLight: "Sie machen die Aufträge.",
     text: "Atex Scale ist Ihr externer Vertrieb: drei Stufen, die aus Suchenden Anfragen und aus Anfragen Aufträge machen – aufgebaut auf einer Seite, die nur für Ihr Angebot da ist.",
     stages: [
-      { title: "Angebot", text: "Wir definieren, was Sie verkaufen: Leistung, Vorzüge, Preisrahmen und das, was Sie besonders macht – und bauen daraus Ihre Angebotsseite auf Ihrer Webseite." },
-      { title: "Zielgruppen-Sichtbarkeit", text: "Wer Ihre Leistung sucht, findet Sie – über Google-Anzeigen, Ihr Unternehmensprofil, SEO und, wo es passt, Meta oder LinkedIn." },
-      { title: "Vertrieb & Automatisierung", text: "Jede Anfrage wird in der ersten Minute beantwortet, an Sie weitergeleitet und bis zur Entscheidung nachgefasst – automatisiert, mit Dashboard." },
+      { title: "Angebot", text: "Wir definieren, was Sie verkaufen: Leistung, Vorzüge, Preisrahmen und das, was Sie besonders macht – und bauen daraus Ihre Angebotsseite auf Ihrer Webseite.", href: "#angebot" },
+      { title: "Zielgruppen-Sichtbarkeit", text: "Wer Ihre Leistung sucht, findet Sie – über Google-Anzeigen, Ihr Unternehmensprofil, SEO und, wo es passt, Meta oder LinkedIn.", href: "#sichtbarkeit" },
+      { title: "Vertrieb & Automatisierung", text: "Jede Anfrage wird in der ersten Minute beantwortet, an Sie weitergeleitet und bis zur Entscheidung nachgefasst – automatisiert, mit Dashboard.", href: "#vertrieb" },
     ],
-    result: { title: "Das Ergebnis: Atex-Scale-qualifizierte Anfragen", text: "Name · Kontakt · konkreter Bedarf · Standort in Ihrem Einzugsgebiet" },
+    stageLabel: "Stufe",
+    stageLink: "Mehr dazu",
+    result: { title: "Das Ergebnis: Atex-Scale-qualifizierte Anfragen", criteria: ["Name", "Kontakt", "konkreter Bedarf", "Standort in Ihrem Einzugsgebiet"] },
     definition: "Alles andere zählen wir nicht. Sie bekommen nur Anfragen, die Sie auch beauftragen können – das ist unser Maßstab in jedem Review.",
     lasting: {
       eyebrow: "Nachhaltig",
