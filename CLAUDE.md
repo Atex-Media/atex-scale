@@ -57,6 +57,9 @@ Hero (Layout alt, ohne Grafik) → Logo-Band → `#engpass` (4 Karten) → `#ueb
 `#angebot` Stufe 1 → `#sichtbarkeit` Stufe 2 → `#vertrieb` Stufe 3 (Board) → `#branchen` Privat/Geschäftskunden (Layout alt)
 → `#ablauf` Der Ablauf (alt) → `#kontakt` Schluss mit Formular (alt). Figma-Grafiken liegen unter `public/images/wp/`
 und werden mit `src/components/figma.tsx` (Zeichenfläche in Figma-Maßen, Positionen in %, Schrift in cqw) nachgebaut.
+„Über uns“ und „Das System“ sind seit 25.10.2026 freier gelayoutet als im Figma (Foto-Karte + Kennzahl-Kacheln; Stufen als
+Ablauf mit Grafik-Feld). Das Vertriebs-Board (`SalesBoard.tsx`, @dnd-kit) ist verschiebbar: Maus, Finger (kurz halten),
+Tastatur; Status, Wert und Kennzahlen richten sich nach der Spalte, Karten und Spalten stehen in `site.sales.board`.
 
 ## Bekannte offene Punkte
 - Vercel-Git-Verknüpfung auf `Atex-Media/atex-scale` umstellen, damit Pushes wieder automatisch bauen.

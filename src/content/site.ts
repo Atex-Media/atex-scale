@@ -296,59 +296,50 @@ export const site = {
     board: {
       title: "Anfragen · Oktober",
       sub: "Ø Erstantwort 48 Sek · Ø Rückruf 3 h 10 Min",
-      live: "Live · 10 Anfragen",
-      // tone: plain = neu, hot = qualifiziert/weiter, muted = abgelehnt · source = Punktfarbe der Quelle
+      live: "Live",
+      requests: "Anfragen",
+      // moved = Status, den eine hierher verschobene Karte zeigt · offen = Wert als „ca.“, gewonnen = fester Wert, sonst kein Wert
       columns: [
-        {
-          title: "Neu eingegangen",
-          bar: "#8a8a86",
-          cards: [
-            { source: "Google Ads", dot: "google-ads", time: "vor 4 Min", title: "Wallbox-Installation", who: "Fam. Huber · Regensburg", status: "Bestätigung gesendet", value: "", tone: "plain" as const },
-            { source: "Webseite", dot: "webseite", time: "vor 26 Min", title: "PV-Anlage 12,2 kWp", who: "HN Gewerbebau GmbH", status: "Bestätigung gesendet", value: "", tone: "plain" as const },
-          ],
-        },
-        {
-          title: "Qualifiziert",
-          bar: "#f26b4b",
-          cards: [
-            { source: "Google Ads", dot: "google-ads", time: "heute", title: "Bad-Sanierung komplett", who: "Fam. Wagner · Neutraubl.", status: "Rückruf offen · bis 16:00", value: "ca. 18.400 €", tone: "hot" as const },
-            { source: "LinkedIn", dot: "linkedin", time: "gestern", title: "Hallenbeleuchtung LED", who: "Kaiser GmbH · Regenstauf", status: "Rückruf offen", value: "ca. 9.500 €", tone: "hot" as const },
-          ],
-        },
-        {
-          title: "Kontaktiert",
-          bar: "#231f20",
-          cards: [
-            { source: "Google Ads", dot: "google-ads", time: "Mo", title: "Smart-Home-Nachrüstung", who: "T. Berger · Barbing", status: "Termin vor Ort · Do 14:00", value: "ca. 6.200 €", tone: "hot" as const },
-            { source: "Mailing", dot: "mailing", time: "Fr", title: "Wartung DGUV V3", who: "Hiendl + Partner", status: "Angebot verschickt", value: "ca. 4.800 € / Jahr", tone: "hot" as const },
-          ],
-        },
-        {
-          title: "Abgeschlossen",
-          bar: "#2f8f5b",
-          cards: [
-            { source: "Google Ads", dot: "google-ads", time: "KW 41", title: "Wallbox + Unterverteilung", who: "Fam. Lohrmeier · Regensburg", status: "Auftrag erteilt", value: "3.900 €", tone: "hot" as const },
-            { source: "Google Suche", dot: "google-suche", time: "KW 40", title: "PV + Speicher", who: "Fam. Huber · Lappersdorf", status: "Auftrag erteilt", value: "18.400 €", tone: "hot" as const },
-          ],
-        },
-        {
-          title: "Abgelehnt",
-          bar: "#c8463a",
-          cards: [
-            { source: "Google Ads", dot: "google-ads", time: "KW 41", title: "Elektroinstallation Neubau", who: "Anfrage aus Hamburg", status: "Außerhalb Einzugsgebiet", value: "", tone: "muted" as const },
-          ],
-        },
+        { id: "neu", title: "Neu eingegangen", bar: "#8a8a86", moved: "Bestätigung gesendet" },
+        { id: "qualifiziert", title: "Qualifiziert", bar: "#f26b4b", moved: "Rückruf offen" },
+        { id: "kontaktiert", title: "Kontaktiert", bar: "#cfcfcb", moved: "Termin vereinbart" },
+        { id: "abgeschlossen", title: "Abgeschlossen", bar: "#2f8f5b", moved: "Auftrag erteilt" },
+        { id: "abgelehnt", title: "Abgelehnt", bar: "#c8463a", moved: "Passt nicht ins Angebot" },
       ],
-      kpis: [
-        { value: "10", label: "Anfragen im Monat", accent: false },
-        { value: "7", label: "Atex-Scale-qualifiziert", accent: false },
-        { value: "2", label: "Aufträge erteilt", accent: false },
-        { value: "22.300 €", label: "Auftragsvolumen", accent: true },
-        { value: "48 Sek", label: "Ø Erstantwort", accent: false },
+      // col = Startspalte · dot = Punktfarbe der Quelle · amount = geschätzter Auftragswert in Euro
+      cards: [
+        { id: "wallbox", col: "neu", source: "Google Ads", dot: "google-ads", time: "vor 4 Min", title: "Wallbox-Installation", who: "Fam. Huber · Regensburg", status: "Bestätigung gesendet", amount: 2400, per: "" },
+        { id: "pv-gewerbe", col: "neu", source: "Webseite", dot: "webseite", time: "vor 26 Min", title: "PV-Anlage 12,2 kWp", who: "HN Gewerbebau GmbH", status: "Bestätigung gesendet", amount: 21500, per: "" },
+        { id: "bad", col: "qualifiziert", source: "Google Ads", dot: "google-ads", time: "heute", title: "Bad-Sanierung komplett", who: "Fam. Wagner · Neutraubling", status: "Rückruf offen · bis 16:00", amount: 18400, per: "" },
+        { id: "zaehlerschrank", col: "qualifiziert", source: "Webseite", dot: "webseite", time: "heute", title: "Zählerschrank erneuern", who: "M. Schmid · Pentling", status: "Rückruf offen · bis 18:00", amount: 3100, per: "" },
+        { id: "led", col: "qualifiziert", source: "LinkedIn", dot: "linkedin", time: "gestern", title: "Hallenbeleuchtung LED", who: "Kaiser GmbH · Regenstauf", status: "Rückruf offen", amount: 9500, per: "" },
+        { id: "smarthome", col: "kontaktiert", source: "Google Ads", dot: "google-ads", time: "Mo", title: "Smart-Home-Nachrüstung", who: "T. Berger · Barbing", status: "Termin vor Ort · Do 14:00", amount: 6200, per: "" },
+        { id: "dguv", col: "kontaktiert", source: "Mailing", dot: "mailing", time: "Fr", title: "Wartung DGUV V3", who: "Hiendl + Partner", status: "Angebot verschickt", amount: 4800, per: " / Jahr" },
+        { id: "unterverteilung", col: "abgeschlossen", source: "Google Ads", dot: "google-ads", time: "KW 41", title: "Wallbox + Unterverteilung", who: "Fam. Lohrmeier · Regensburg", status: "Auftrag erteilt", amount: 3900, per: "" },
+        { id: "speicher", col: "abgeschlossen", source: "Google Suche", dot: "google-suche", time: "KW 40", title: "PV + Speicher", who: "Fam. Huber · Lappersdorf", status: "Auftrag erteilt", amount: 18400, per: "" },
+        { id: "hamburg", col: "abgelehnt", source: "Google Ads", dot: "google-ads", time: "KW 41", title: "Elektroinstallation Neubau", who: "Anfrage aus Hamburg", status: "Außerhalb Einzugsgebiet", amount: 0, per: "" },
       ],
+      // Kennzahlen rechnen mit, wenn Karten verschoben werden; die Erstantwort bleibt fest
+      kpis: {
+        total: "Anfragen im Monat",
+        qualified: "Atex-Scale-qualifiziert",
+        won: "Aufträge erteilt",
+        volume: "Auftragsvolumen",
+        response: { value: "48 Sek", label: "Ø Erstantwort" },
+      },
+      approx: "ca.",
+      reset: "Zurücksetzen",
+      hint: "Probieren Sie es aus: Karten in eine andere Spalte ziehen.",
+      hintTouch: "Seitlich wischen · Karte kurz gedrückt halten und ziehen.",
+      a11y: {
+        instructions: "Leertaste drücken, um die Karte aufzunehmen. Mit den Pfeiltasten verschieben, mit der Leertaste ablegen, mit Escape abbrechen.",
+        picked: "aufgenommen",
+        over: "über Spalte",
+        dropped: "abgelegt in Spalte",
+        cancelled: "Verschieben abgebrochen.",
+      },
     },
     note: "Board-Ansicht schematisch · Das Siegel markiert Atex-Scale-qualifizierte Anfragen: Name, Kontakt, konkreter Bedarf und Standort im Einzugsgebiet geprüft.",
-    swipe: "Zum Ansehen seitlich wischen",
   },
 
   // Der Ablauf: vier Reiter links, Detail rechts (Text + vier Kärtchen), darunter der Kreislauf als Leiste
