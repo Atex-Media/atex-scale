@@ -67,4 +67,4 @@ Tastatur; Status, Wert und Kennzahlen richten sich nach der Spalte, Karten und S
 ## Bekannte offene Punkte
 - Google-Bewertung 4,8 (Hero) ohne Link zum Google-Profil.
 - Zahlen mit `TODO prüfen` in site.ts (24 h, Calendly-Dauer, Über-uns-Seite: 14 Tage, 280+ auf /ueber-uns).
-- „Schriftliche Zusage“ steht noch im Schluss-Text und in der Google-Beschreibung (meta.description); Seitentitel ist bereinigt.
+- „Schriftliche Zusage“ ist seit 25.10.2026 überall entfernt (Titel, Beschreibung, Schluss-Text, Über-uns-Seite).

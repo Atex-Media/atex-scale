@@ -14,7 +14,7 @@ export const site = {
   meta: {
     title: "Atex Scale – Neue Kunden gewinnen ohne Kaltakquise und Portale",
     description:
-      "Atex Scale bringt mittelständischen Betrieben qualifizierte Anfragen und gebuchte Termine: Kampagnen auf Meta, Google und LinkedIn, Landingpage, Qualifizierung jeder Anfrage binnen 24 Stunden. Vorab geprüft, schriftlich zugesagt.",
+      "Atex Scale bringt mittelständischen Betrieben qualifizierte Anfragen und gebuchte Termine: Kampagnen auf Meta, Google und LinkedIn, Landingpage, Qualifizierung jeder Anfrage binnen 24 Stunden.",
   },
 
   brand: {
@@ -439,7 +439,7 @@ export const site = {
     meta: { title: "Über uns – Atex Scale", description: "Wer hinter Atex Scale steht: das Team aus Regensburg, unsere Geschichte seit 2018 und die Atex Media Gruppe." },
     hero: {
       headline: "Atex Media Gruppe, aus Regensburg in den DACH-Raum.",
-      text: "Atex Scale bringt Betrieben, Praxen und Kanzleien im Mittelstand neue Kunden: mit Kampagnen, Landingpages, einem festen Team an Ihrer Seite und einer Zusage, die schriftlich gilt. Geplant in Regensburg, umgesetzt im gesamten DACH-Raum.",
+      text: "Atex Scale bringt Betrieben, Praxen und Kanzleien im Mittelstand neue Kunden: mit Kampagnen, Landingpages und einem festen Team an Ihrer Seite. Geplant in Regensburg, umgesetzt im gesamten DACH-Raum.",
       cta: "Jetzt Kunden gewinnen",
       stats: [
         { value: "280+", label: "Betriebe und Kanzleien" }, // TODO prüfen
@@ -511,7 +511,7 @@ export const site = {
     eyebrow: "Kostenloser Markt-Check · unverbindlich",
     headlineBold: "Wie viele neue Kunden",
     headlineLight: "stecken in Ihrer Region?",
-    text: "Im Erstgespräch sehen wir uns Ihr Angebot und Ihre Region an. Sie erfahren, wie oft gesucht wird, was eine Anfrage kosten wird und ob wir Ihnen eine Zusage geben können. Die Einschätzung bekommen Sie schriftlich, innerhalb eines Werktags.",
+    text: "Im Erstgespräch sehen wir uns Ihr Angebot und Ihre Region an. Sie erfahren, wie oft gesucht wird, was eine Anfrage kosten wird und mit wie vielen Anfragen Sie rechnen können. Die Einschätzung bekommen Sie innerhalb eines Werktags.",
     bullets: [
       { icon: "search" as const, title: "Ihr Markt in Zahlen", text: "Suchvolumen und Wettbewerb in Ihrem Gebiet" },
       { icon: "chartLine" as const, title: "Ehrliche Einschätzung", text: "Lohnt sich Werbung für Ihr Angebot, und mit welchem Budget?" },
