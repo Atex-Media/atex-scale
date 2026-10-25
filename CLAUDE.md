@@ -13,7 +13,9 @@ Repo `vndno/atexjobs`, live www.atex-jobs.de) – gleiche Komponenten, gleiche O
 - Stand 25.10.2026: Vercel baut nach einem Push NICHT automatisch (Git-Verknüpfung zeigt noch auf vndno/atex-scale).
   Builds per Vercel-Tool `create_deployment` (gitSource github, org Atex-Media, repo atex-scale, ref main, sha) anstoßen.
 - Live-Seite blockt curl mit „Vercel Security Checkpoint“ → Live-Prüfung im Browser-Pane, Deploy-Status über Vercel-Tool.
-- Domain: noch keine (später z. B. atex-scale.de → dann NEXT_PUBLIC_SITE_URL setzen).
+- Domain: www.atex-scale.de (Hauptadresse) + atex-scale.de (308 → www) seit 25.10.2026 im Vercel-Projekt;
+  NEXT_PUBLIC_SITE_URL = https://www.atex-scale.de (Production). Domain wird bei All-Inkl registriert/verwaltet
+  (wie atex-media.de, atex-jobs.de); DNS dort: A @ → 216.150.1.1 und 216.150.16.1, CNAME www → bffa00f9b25b3725.vercel-dns-017.com.
 
 ## Branding
 - Logo: „Atex“ fett dunkelgrau (#3a3a3a), „Scale“ dünn in Orange. Wortmarke = `brand.name` + `brand.nameAccent` in site.ts.
