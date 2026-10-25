@@ -11,8 +11,7 @@ Whitepaper-Grafiken (aus Figma „Atex Whitepaper Webseiten“, Seite „Whitepa
 - wp/vertrieb/  Punkte der Anfrage-Quellen, Live-Punkt, Siegel „qualifiziert“
 BAFA-Siegel: `bafa-berater.png` (Berater-ID 228969; das Siegel im Figma trägt darunter eine falsche Nummer).
 
-Noch offen:
-- og-image.jpg                 (Vorschaubild für Google/LinkedIn/WhatsApp, 1200×630 – aktuell nur ein Bürofoto als Übergang)
+Vorschaubild: og-image.jpg (1200×630, Wortmarke Atex Scale auf Punktraster, seit 25.10.2026)
 
 Weiter verwendet: kunden/01–04.jpg (Hero) · logos/* (Logo-Band: Brandl, Innengrün, Infinno, Energie Optimal, Schuld, RF Allgäu) · team/*.jpg · ueber-uns/*.jpg (auch Über-uns-Seite)
 

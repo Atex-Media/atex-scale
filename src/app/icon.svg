@@ -5,10 +5,10 @@
   </defs>
   <rect width="512" height="512" fill="url(#bg)"/>
   <g clip-path="url(#c)">
-    <rect width="512" height="512" fill="#7a2410"/>
-    <circle cx="444" cy="412" r="310" fill="#c2432a"/>
-    <circle cx="444" cy="412" r="278" fill="#f26a4a"/>
-    <circle cx="444" cy="412" r="250" fill="#f9a58c"/>
-    <circle cx="444" cy="412" r="213" fill="#fdd9cc"/>
+    <rect width="512" height="512" fill="#0b3a14"/>
+    <circle cx="444" cy="412" r="310" fill="#3f6e43"/>
+    <circle cx="444" cy="412" r="278" fill="#6f9c74"/>
+    <circle cx="444" cy="412" r="250" fill="#a6d0a9"/>
+    <circle cx="444" cy="412" r="213" fill="#d3ecd3"/>
   </g>
 </svg>

@@ -22,7 +22,8 @@ Repo `vndno/atexjobs`, live www.atex-jobs.de) – gleiche Komponenten, gleiche O
 - Tokens in `src/app/globals.css`: accent **#f26a4a**, accent-strong #dd4f2d, accent-soft #fbd3c8. Rest identisch mit AtexJobs
   (Navy #0e1721, Creme, Surface …). Hintergrund-Verläufe dürfen orange getönt sein. Grün (#66a182) bleibt für „läuft/geprüft“.
 - Schrift Myriad Pro (Adobe Fonts Kit uei1ums), Fallback Source Sans 3. Headline-Muster: fetter Teil + dünner Teil (`h-light`).
-- Favicon: orange Kugel auf warmem Verlauf (`src/app/icon.svg` → icon.png/apple-icon.png via qlmanage + sips).
+- Favicon: grüne Atex-Kugel auf warmem orange-weißem Verlauf (`src/app/icon.svg` → icon.png 512 / apple-icon.png 180,
+  per Headless-Chrome-Screenshot + sips). Vorschaubild `public/images/og-image.jpg` (1200×630): Wortmarke auf Punktraster.
 
 ## Arbeitsregeln (vom Auftraggeber Daniel Meier, nicht technisch, Deutsch)
 - **Keine Texte, Bilder oder 1:1-Designs von fremden Seiten übernehmen.** Referenzseiten (z. B. trimando.at) liefern nur
@@ -64,6 +65,6 @@ Ablauf mit Grafik-Feld). Das Vertriebs-Board (`SalesBoard.tsx`, @dnd-kit) ist ve
 Tastatur; Status, Wert und Kennzahlen richten sich nach der Spalte, Karten und Spalten stehen in `site.sales.board`.
 
 ## Bekannte offene Punkte
-- Bilder: echtes `og-image.jpg` (aktuell Bürofoto). Google-Bewertung 4,8 (Hero) ohne Link zum Google-Profil.
+- Google-Bewertung 4,8 (Hero) ohne Link zum Google-Profil.
 - Zahlen mit `TODO prüfen` in site.ts (24 h, Calendly-Dauer, Über-uns-Seite: 14 Tage, 280+ auf /ueber-uns).
-- „Schriftliche Zusage“ steht noch im Schluss-Text und im Seitentitel (meta), kommt im Whitepaper nicht vor.
+- „Schriftliche Zusage“ steht noch im Schluss-Text und in der Google-Beschreibung (meta.description); Seitentitel ist bereinigt.
